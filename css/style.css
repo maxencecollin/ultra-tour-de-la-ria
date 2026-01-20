@@ -61,6 +61,13 @@ body {
     font-size: 1.3rem;
     font-weight: bold;
     font-family: var(--font-heading);
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
 }
 
 .nav-links {
