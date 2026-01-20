@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ultra Trail de la Ria d'Étel - 80km et 30km - 23 mai 2027">
+    <meta name="description" content="Ultra Trail de la Ria d'Étel - 80km, Relais et 30km - 23 mai 2027 - Bretagne, Morbihan">
     <title>Ultra Trail de la Ria d'Étel 2027</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -29,45 +29,188 @@
     </header>
 
     <main>
+        <!-- Hero Section avec vidéo drone -->
         <section class="hero">
             <video class="hero-video" autoplay muted loop playsinline>
                 <source src="images/Video_drone/drone-1.mp4" type="video/mp4">
             </video>
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1>Ultra Trail de la Ria d'Étel</h1>
+                <h1>Ultra Trail de la Ria</h1>
                 <p class="date">23 mai 2027</p>
-                <p class="tagline">80km & 30km autour de la magnifique Ria d'Étel</p>
+                <p class="tagline">80km • Relais • 30km</p>
+                <p class="location">Ria d'Étel, Bretagne</p>
                 <a href="pages/inscription.html" class="btn btn-primary">S'inscrire</a>
+            </div>
+            <a href="#infos" class="scroll-indicator" aria-label="Défiler vers le bas">
+                <span></span>
+            </a>
+        </section>
+
+        <!-- Bandeau infos clés -->
+        <section id="infos" class="key-info">
+            <div class="key-info-grid">
+                <div class="key-info-item">
+                    <span class="key-number">3</span>
+                    <span class="key-label">Épreuves</span>
+                </div>
+                <div class="key-info-item">
+                    <span class="key-number">80<small>km</small></span>
+                    <span class="key-label">Ultra</span>
+                </div>
+                <div class="key-info-item">
+                    <span class="key-number">7</span>
+                    <span class="key-label">Communes traversées</span>
+                </div>
+                <div class="key-info-item">
+                    <span class="key-number">1</span>
+                    <span class="key-label">Traversée en bateau</span>
+                </div>
             </div>
         </section>
 
+        <!-- Présentation -->
+        <section class="presentation">
+            <div class="presentation-content">
+                <h2>L'Ultra Trail de la Ria</h2>
+                <p>
+                    Vivez une expérience unique au cœur de la <strong>Ria d'Étel</strong>,
+                    l'un des plus beaux sites naturels de Bretagne. Parcourez des sentiers
+                    sauvages entre terre et mer, traversez des villages de caractère et
+                    admirez la célèbre <strong>maison de Nichtarguer</strong> sur son îlot.
+                </p>
+                <p>
+                    Ce trail en semi-autonomie vous fera découvrir un territoire classé
+                    <strong>Natura 2000</strong>, sur les sentiers du Conservatoire du Littoral
+                    et du département du Morbihan.
+                </p>
+                <div class="presentation-features">
+                    <div class="feature">
+                        <span class="feature-icon">🚤</span>
+                        <span class="feature-text">Traversée en bateau</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🌿</span>
+                        <span class="feature-text">Site Natura 2000</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🏘️</span>
+                        <span class="feature-text">7 communes</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Les 3 courses -->
         <section class="races">
-            <h2>Nos Courses</h2>
+            <h2>Les Épreuves</h2>
             <div class="races-grid">
-                <article class="race-card">
-                    <h3>Ultra 80km</h3>
-                    <ul>
-                        <li>Distance : 80 km</li>
-                        <li>Dénivelé : à définir</li>
-                        <li>Barrière horaire : à définir</li>
+                <!-- 80km -->
+                <article class="race-card race-ultra">
+                    <div class="race-badge">Ultra</div>
+                    <h3>80 km</h3>
+                    <p class="race-subtitle">Tour de la Ria</p>
+                    <ul class="race-details">
+                        <li>
+                            <span class="detail-label">Distance</span>
+                            <span class="detail-value">≈ 80 km</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">Départ</span>
+                            <span class="detail-value">6h00</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">Lieu</span>
+                            <span class="detail-value">Locoal-Mendon</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">Temps max</span>
+                            <span class="detail-value">15h</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">Tarif</span>
+                            <span class="detail-value">90€</span>
+                        </li>
                     </ul>
+                    <div class="race-extras">
+                        <span class="extra-tag">Traversée bateau</span>
+                        <span class="extra-tag">Semi-autonomie</span>
+                    </div>
                     <a href="pages/parcours.html#ultra-80" class="btn btn-secondary">Découvrir le parcours</a>
                 </article>
-                <article class="race-card">
-                    <h3>Trail 30km</h3>
-                    <ul>
-                        <li>Distance : 30 km</li>
-                        <li>Dénivelé : à définir</li>
-                        <li>Barrière horaire : à définir</li>
+
+                <!-- Relais -->
+                <article class="race-card race-relais">
+                    <div class="race-badge">Duo</div>
+                    <h3>Relais</h3>
+                    <p class="race-subtitle">80 km à deux</p>
+                    <ul class="race-details">
+                        <li>
+                            <span class="detail-label">Distance</span>
+                            <span class="detail-value">≈ 80 km (relais km 48)</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">Départ</span>
+                            <span class="detail-value">6h00</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">Lieu</span>
+                            <span class="detail-value">Locoal-Mendon</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">Temps max</span>
+                            <span class="detail-value">15h</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">Tarif</span>
+                            <span class="detail-value">110€ / équipe</span>
+                        </li>
                     </ul>
+                    <div class="race-extras">
+                        <span class="extra-tag">Traversée bateau</span>
+                        <span class="extra-tag">Équipe de 2</span>
+                    </div>
+                    <a href="pages/parcours.html#relais" class="btn btn-secondary">Découvrir le parcours</a>
+                </article>
+
+                <!-- 30km -->
+                <article class="race-card race-trail">
+                    <div class="race-badge">Trail</div>
+                    <h3>30 km</h3>
+                    <p class="race-subtitle">Découverte</p>
+                    <ul class="race-details">
+                        <li>
+                            <span class="detail-label">Distance</span>
+                            <span class="detail-value">≈ 30 km</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">Départ</span>
+                            <span class="detail-value">8h00</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">Lieu</span>
+                            <span class="detail-value">Sainte-Hélène</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">Temps max</span>
+                            <span class="detail-value">6h</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">Tarif</span>
+                            <span class="detail-value">40€</span>
+                        </li>
+                    </ul>
+                    <div class="race-extras">
+                        <span class="extra-tag">Accessible</span>
+                    </div>
                     <a href="pages/parcours.html#trail-30" class="btn btn-secondary">Découvrir le parcours</a>
                 </article>
             </div>
         </section>
 
+        <!-- Galerie photos -->
         <section class="gallery">
-            <h2>Découvrez le parcours</h2>
+            <h2>Le Parcours en Images</h2>
             <div class="gallery-grid">
                 <img src="images/HODM5670-web.jpg" alt="Vue aérienne de Saint-Cado et la maison de Nichtarguer" loading="lazy">
                 <img src="images/IEAP5443-web.jpg" alt="Panorama de la Ria d'Étel" loading="lazy">
@@ -76,6 +219,37 @@
             </div>
         </section>
 
+        <!-- Infos pratiques résumé -->
+        <section class="info-summary">
+            <h2>Infos Pratiques</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📍 Retrait des dossards</h3>
+                    <p><strong>Salle Émeraude</strong><br>Locoal-Mendon</p>
+                    <p>Pièce d'identité obligatoire</p>
+                </div>
+                <div class="info-card">
+                    <h3>📝 Inscriptions</h3>
+                    <p>Ouverture prochaine sur <strong>Klikego</strong></p>
+                    <p>Clôture : 16 mai 2027 à 20h</p>
+                </div>
+                <div class="info-card">
+                    <h3>🎒 Matériel obligatoire</h3>
+                    <p>Réserve d'eau, téléphone, couverture de survie, veste imperméable, lampe frontale...</p>
+                    <a href="pages/infos-pratiques.html#materiel">Voir la liste complète</a>
+                </div>
+                <div class="info-card">
+                    <h3>🥤 Ravitaillements</h3>
+                    <p>Tous les <strong>10 à 15 km</strong></p>
+                    <p>Solide et liquide</p>
+                </div>
+            </div>
+            <div class="info-cta">
+                <a href="pages/infos-pratiques.html" class="btn btn-secondary">Toutes les infos pratiques</a>
+            </div>
+        </section>
+
+        <!-- Vidéo drone -->
         <section class="video-section">
             <h2>La Ria vue du ciel</h2>
             <div class="video-container">
@@ -86,20 +260,56 @@
             </div>
         </section>
 
-        <section class="about">
-            <h2>La Ria d'Étel</h2>
-            <p>
-                Découvrez les paysages exceptionnels de la Ria d'Étel,
-                un bras de mer unique en Bretagne, entre terre et océan.
-                Courez le long de ses rives sauvages, traversez ses villages de caractère
-                et admirez la célèbre maison de Nichtarguer sur son îlot.
+        <!-- Communes partenaires -->
+        <section class="communes">
+            <h2>Les Communes du Parcours</h2>
+            <div class="communes-list">
+                <span class="commune">Locoal-Mendon</span>
+                <span class="commune">Sainte-Hélène</span>
+                <span class="commune">Étel</span>
+                <span class="commune">Landévant</span>
+                <span class="commune">Belz</span>
+                <span class="commune">Nostang</span>
+                <span class="commune">Plouhinec</span>
+            </div>
+            <p class="communes-partners">
+                En partenariat avec Auray Quiberon Terre Atlantique et Blavet Bellevue Océan Communauté
             </p>
+        </section>
+
+        <!-- CTA Inscription -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Prêt à relever le défi ?</h2>
+                <p>Rejoignez-nous le 23 mai 2027 pour une aventure inoubliable autour de la Ria d'Étel.</p>
+                <a href="pages/inscription.html" class="btn btn-primary btn-large">S'inscrire maintenant</a>
+            </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2027 Ultra Trail de la Ria d'Étel - Tous droits réservés</p>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Ultra Trail de la Ria</h4>
+                    <p>23 mai 2027<br>Ria d'Étel, Morbihan</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:contact@ultratraildelaria.fr">contact@ultratraildelaria.fr</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="pages/inscription.html">Inscription</a></li>
+                        <li><a href="pages/parcours.html">Parcours</a></li>
+                        <li><a href="pages/infos-pratiques.html">Règlement</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2027 Ultra Trail de la Ria d'Étel - Tous droits réservés</p>
+            </div>
         </div>
     </footer>
 
