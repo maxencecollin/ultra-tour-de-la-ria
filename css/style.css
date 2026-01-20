@@ -285,18 +285,16 @@ body {
 
 .feature {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-}
-
-.feature-icon {
-    font-size: 2.5rem;
 }
 
 .feature-text {
     font-size: 0.95rem;
     color: var(--color-text-light);
+    background: var(--color-light);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
 }
 
 /* ==========================================================================

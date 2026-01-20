@@ -9,6 +9,10 @@
   3. Lancer les tests si disponibles
   4. S'assurer que le site s'affiche correctement (pas d'erreurs console)
 
+## Style et contenu
+
+- **Pas d'emojis** : ne pas utiliser d'emojis dans le code, le contenu du site, ou les messages
+
 ## Maintenance du projet
 
 - **Résumer régulièrement** la conversation et les décisions prises
