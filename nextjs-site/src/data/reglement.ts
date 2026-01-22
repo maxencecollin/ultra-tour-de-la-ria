@@ -19,20 +19,32 @@ export const reglementSections: ReglementSection[] = [
     icon: 'clipboard',
     content: [
       {
-        text: 'L\'inscription a l\'Ultra Trail de la Ria est ouverte a toute personne majeure (18 ans revolus le jour de la course) ou mineure de 16 ans minimum avec autorisation parentale pour le 30km uniquement.',
+        text: 'L\'inscription a l\'Ultra Trail de la Ria est ouverte a toute personne agee de 20 ans minimum le jour de la course (categorie Espoir). Les inscriptions se font via la plateforme Klikego.',
       },
       {
         title: 'Documents obligatoires',
-        text: 'Pour valider votre inscription, vous devez fournir :',
+        text: 'Pour valider votre inscription, vous devez fournir l\'un des documents suivants :',
         list: [
-          'Un certificat medical de non contre-indication a la pratique du trail running en competition, date de moins d\'un an au jour de la course',
-          'OU une licence FFA (Federation Francaise d\'Athletisme) en cours de validite avec mention "competition"',
-          'OU une licence d\'une federation membre de World Athletics',
+          'Une licence FFA en cours de validite : Athle Competition, Athle Entreprise ou Athle Running',
+          'OU une attestation PPS (Parcours de Prevention Sante) datee de moins de 6 mois',
         ],
       },
       {
-        text: 'Les inscriptions sont nominatives et ne peuvent etre transferees a un tiers. En cas d\'annulation, les conditions de remboursement sont detaillees dans les CGV.',
+        title: 'Tarifs et places disponibles',
+        text: 'Les inscriptions sont limitees :',
+        list: [
+          'Ultra 80km : 70 EUR - 350 places',
+          'Relais Duo : 100 EUR par equipe - 50 duos (100 coureurs)',
+          'Le 30km : 30 EUR - 450 places',
+        ],
+      },
+      {
+        text: 'Cloture des inscriptions : 15 mai 2027 ou des que le quota de participants est atteint. Les inscriptions sont nominatives et ne peuvent etre transferees a un tiers.',
         important: true,
+      },
+      {
+        title: 'Assurance annulation',
+        text: 'Une assurance annulation est proposee lors de l\'inscription. En cas d\'annulation sans assurance, les conditions de remboursement sont detaillees dans les CGV.',
       },
     ],
   },
@@ -42,22 +54,28 @@ export const reglementSections: ReglementSection[] = [
     icon: 'backpack',
     content: [
       {
-        text: 'Le port de l\'equipement obligatoire est verifie au depart et peut l\'etre a tout moment sur le parcours. Tout coureur ne presentant pas l\'integralite de l\'equipement sera disqualifie.',
+        text: 'Le port de l\'equipement obligatoire est verifie au depart et peut l\'etre a tout moment sur le parcours. Tout coureur ne presentant pas l\'integralite de l\'equipement sera penalise ou disqualifie.',
+        important: true,
+      },
+      {
+        title: 'BATONS INTERDITS',
+        text: 'L\'utilisation de batons est strictement INTERDITE sur toutes les courses (80km, Relais et 30km). Tout coureur utilisant des batons sera disqualifie.',
         important: true,
       },
       {
         title: 'Ultra 80km et Relais',
         text: 'Equipement obligatoire pour les formats longs :',
         list: [
+          'Sac de course ou strap (obligatoire)',
           'Telephone portable charge avec le numero de l\'organisation enregistre',
           'Gobelet ou gourde reutilisable (pas de gobelet jetable sur les ravitaillements)',
           'Reserve d\'eau minimum 1L',
           'Reserve alimentaire de secours',
           'Couverture de survie (min 1,40m x 2m)',
           'Sifflet',
-          'Lampe frontale avec piles de rechange (obligatoire pour l\'Ultra)',
+          'Lampe frontale avec piles de rechange (obligatoire)',
           'Vetement chaud (manches longues, min 180g)',
-          'Vetement impermeables haut et bas (coutures etanches)',
+          'Vetements impermeables haut et bas (coutures etanches)',
           'Bonnet ou bandeau couvrant les oreilles',
           'Gants',
         ],
@@ -66,6 +84,7 @@ export const reglementSections: ReglementSection[] = [
         title: 'Le 30km',
         text: 'Equipement obligatoire allege :',
         list: [
+          'Sac de course ou strap',
           'Telephone portable charge',
           'Gobelet ou gourde reutilisable',
           'Reserve d\'eau minimum 500ml',
@@ -73,6 +92,10 @@ export const reglementSections: ReglementSection[] = [
           'Sifflet',
           'Vetement chaud (selon meteo)',
         ],
+      },
+      {
+        title: 'Kit canicule',
+        text: 'En cas de fortes chaleurs, l\'organisation peut imposer un kit canicule supplementaire : casquette/bob, creme solaire, reserve d\'eau supplementaire. Les coureurs seront informes par email avant la course.',
       },
     ],
   },
@@ -86,25 +109,29 @@ export const reglementSections: ReglementSection[] = [
       },
       {
         title: 'Ultra 80km',
-        text: 'Barrieres horaires de l\'Ultra :',
+        text: 'Depart a 8h00 depuis la Salle Emeraude, Locoal-Mendon :',
         list: [
-          'Depart : 6h00',
-          'Km 25 (Ravito 2) : 10h00 (4h de course)',
-          'Km 45 - Traversee bateau : 14h00 (8h de course)',
-          'Km 60 (Ravito 5) : 17h00 (11h de course)',
-          'Arrivee Km 80 : 20h00 (14h de course)',
+          'Barriere finale : 23h00 (15h de course)',
+          'Ravitaillements tous les 10-15km',
+          'Temps neutralise pour la traversee bateau',
         ],
       },
       {
         title: 'Relais Duo',
-        text: 'Le Relayeur 1 doit arriver a Sainte-Helene (Km 47) avant 14h00 pour permettre le passage de relais.',
+        text: 'Depart a 8h00 depuis la Salle Emeraude, Locoal-Mendon :',
+        list: [
+          'Relayeur 1 : 50km (Locoal-Mendon vers zone de relais)',
+          'Passage de relais au km 50',
+          'Relayeur 2 : 30km (zone de relais vers Locoal-Mendon)',
+          'Barriere finale : 23h00 (15h de course)',
+        ],
       },
       {
         title: 'Le 30km',
-        text: 'Barriere horaire unique :',
+        text: 'Depart a 10h00 depuis le Stade municipal de Sainte-Helene :',
         list: [
-          'Depart : 8h30',
-          'Arrivee : 15h30 (7h de course)',
+          'Barriere finale : 16h00 (6h de course)',
+          'Arrivee a Locoal-Mendon',
         ],
       },
     ],
@@ -139,7 +166,20 @@ export const reglementSections: ReglementSection[] = [
         important: true,
       },
       {
-        text: 'Des navettes de recuperation sont prevues aux principaux ravitaillements pour ramener les coureurs au village depart/arrivee.',
+        title: 'Navettes de recuperation',
+        text: 'Des navettes bus sont disponibles aux principaux ravitaillements pour ramener les coureurs au village depart/arrivee. Service de navettes : 8 EUR (a reserver lors de l\'inscription ou sur place).',
+      },
+      {
+        title: 'Penalites et disqualifications',
+        text: 'Les infractions suivantes entrainent des penalites ou la disqualification :',
+        list: [
+          'Equipement obligatoire incomplet',
+          'Utilisation de batons',
+          'Non-respect du parcours balise',
+          'Jet de dechets sur le parcours',
+          'Comportement dangereux ou irrespectueux',
+          'Aide exterieure non autorisee',
+        ],
       },
     ],
   },
@@ -169,9 +209,8 @@ export const reglementSections: ReglementSection[] = [
         list: [
           'Zero gobelet jetable : apportez votre contenant',
           'Ravitaillements avec produits locaux et de saison',
-          'Signalétique reutilisable et recyclable',
+          'Signaletique reutilisable et recyclable',
           'Incitation au covoiturage et transports en commun',
-          'Compensation carbone de l\'evenement',
         ],
       },
     ],
@@ -182,17 +221,16 @@ export const reglementSections: ReglementSection[] = [
     icon: 'anchor',
     content: [
       {
-        text: 'La traversee de la Ria en bateau est un moment unique de l\'Ultra 80km. Cette section est a temps neutralise.',
+        text: 'La traversee de la Ria en bateau est un moment unique de l\'Ultra 80km et du Relais Duo. Cette section est a temps neutralise.',
       },
       {
         title: 'Fonctionnement',
         text: 'Details de la traversee :',
         list: [
-          'Embarquement au ponton de la Pointe (Km 45)',
-          'Traversee d\'environ 10 minutes',
-          'Debarquement a Sainte-Helene',
-          'Le temps de traversee n\'est pas compte dans votre temps de course',
+          'Traversee incluse dans le parcours du 80km et du Relais',
+          'Temps de traversee non compte dans votre temps de course',
           'Gilets de sauvetage obligatoires fournis par l\'organisation',
+          'Suivez les consignes des benevoles et du personnel navigant',
         ],
       },
       {

@@ -258,7 +258,7 @@ export default function Epreuves() {
             Pret a relever le defi ?
           </h2>
           <p className="text-ocean-300 mb-8">
-            Rejoignez-nous le 23 Mai 2027 pour vivre une experience unique sur les sentiers de la Ria d'Etel.
+            Rejoignez-nous le 22 Mai 2027 pour vivre une experience unique sur les sentiers de la Ria d'Etel.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

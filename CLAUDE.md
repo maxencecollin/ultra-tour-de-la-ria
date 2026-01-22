@@ -28,8 +28,9 @@
 ## Informations sur l'événement
 
 - **Nom** : Ultra Trail de la Ria d'Étel
-- **Date** : 23 mai 2027
+- **Date** : 22 mai 2027
 - **Courses** :
-  - Ultra 80 km
-  - Trail 30 km
-- **Lieu** : Ria d'Étel, Bretagne
+  - Ultra 80 km (350 places)
+  - Relais Duo 80 km (50 duos)
+  - Trail 30 km (450 places)
+- **Lieu** : Ria d'Étel, Bretagne (Locoal-Mendon)
