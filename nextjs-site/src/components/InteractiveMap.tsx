@@ -205,11 +205,11 @@ export default function InteractiveMap({ tracks, className = '' }: InteractiveMa
         zoom={11}
         className="w-full h-full"
         scrollWheelZoom={true}
-        style={{ background: '#f5f5f5' }}
+        style={{ background: '#d4e6d4' }}
       >
         <TileLayer
-          attribution='&copy; <a href="https://carto.com/">CARTO</a>'
-          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          attribution='&copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+          url="https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"
         />
 
         <MapBoundsUpdater tracksData={tracksData} />
