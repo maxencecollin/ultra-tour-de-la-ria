@@ -89,6 +89,31 @@ function createEndIcon(color: string) {
   })
 }
 
+function createRavitaillementIcon() {
+  return L.divIcon({
+    className: 'custom-marker',
+    html: `
+      <div style="
+        width: 28px;
+        height: 28px;
+        background: #22c55e;
+        border: 3px solid white;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      ">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+      </div>
+    `,
+    iconSize: [28, 28],
+    iconAnchor: [14, 14],
+  })
+}
+
 export default function InteractiveMap({ tracks, className = '' }: InteractiveMapProps) {
   const [tracksData, setTracksData] = useState<TrackData[]>([])
   const [loading, setLoading] = useState(true)
@@ -228,6 +253,21 @@ export default function InteractiveMap({ tracks, className = '' }: InteractiveMa
                   </div>
                 </Popup>
               </Marker>
+
+              {/* Waypoints (Ravitaillements) */}
+              {gpxData.waypoints.map((waypoint, index) => (
+                <Marker
+                  key={`${track.id}-wpt-${index}`}
+                  position={[waypoint.lat, waypoint.lng]}
+                  icon={createRavitaillementIcon()}
+                >
+                  <Popup>
+                    <div className="text-sm">
+                      <strong>{waypoint.name}</strong>
+                    </div>
+                  </Popup>
+                </Marker>
+              ))}
             </div>
           )
         })}
@@ -237,7 +277,7 @@ export default function InteractiveMap({ tracks, className = '' }: InteractiveMa
       {tracksData.length > 0 && (
         <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 z-[1000] shadow-lg border border-gray-200">
           <p className="text-xs text-gray-500 mb-2 font-semibold">Legende</p>
-          <div className="space-y-1">
+          <div className="space-y-1.5">
             {tracksData.map(({ track }) => (
               <div key={track.id} className="flex items-center gap-2 text-xs">
                 <div
@@ -247,6 +287,14 @@ export default function InteractiveMap({ tracks, className = '' }: InteractiveMa
                 <span className="text-gray-700">{track.name}</span>
               </div>
             ))}
+            {tracksData.some(({ gpxData }) => gpxData.waypoints.length > 0) && (
+              <div className="flex items-center gap-2 text-xs pt-1 border-t border-gray-200">
+                <div className="w-4 h-4 rounded-full bg-green-500 flex items-center justify-center">
+                  <div className="w-1.5 h-1.5 rounded-full bg-white" />
+                </div>
+                <span className="text-gray-700">Ravitaillement</span>
+              </div>
+            )}
           </div>
         </div>
       )}

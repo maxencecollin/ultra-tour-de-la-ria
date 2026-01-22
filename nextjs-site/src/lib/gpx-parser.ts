@@ -6,8 +6,16 @@ export interface GpxPoint {
   ele: number
 }
 
+export interface GpxWaypoint {
+  lat: number
+  lng: number
+  name: string
+  type?: string
+}
+
 export interface ParsedGpx {
   points: GpxPoint[]
+  waypoints: GpxWaypoint[]
   bounds: {
     minLat: number
     maxLat: number
@@ -68,11 +76,26 @@ export async function parseGpxFile(url: string): Promise<ParsedGpx> {
     throw new Error('No track, route, or waypoints found in GPX file')
   }
 
+  // Extract waypoints (ravitaillements, etc.)
+  const waypoints: GpxWaypoint[] = gpx.waypoints
+    ? gpx.waypoints
+        .filter((wpt: { name: string; type?: string }) =>
+          wpt.type === 'User' || wpt.name?.toLowerCase().includes('ravit')
+        )
+        .map((wpt: { lat: number; lon: number; name: string; type?: string }) => ({
+          lat: wpt.lat,
+          lng: wpt.lon,
+          name: wpt.name,
+          type: wpt.type,
+        }))
+    : []
+
   const lats = points.map((p) => p.lat)
   const lngs = points.map((p) => p.lng)
 
   return {
     points,
+    waypoints,
     bounds: {
       minLat: Math.min(...lats),
       maxLat: Math.max(...lats),
