@@ -1,33 +1,32 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import type { Metadata } from 'next'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: "Ultra Trail de la Ria d'Etel 2027",
-  description: "Ultra Trail de la Ria d'Etel - 80km, Relais et 30km - 23 mai 2027 - Bretagne, Morbihan",
-  keywords: ["trail", "ultra trail", "course", "ria d'etel", "bretagne", "morbihan", "running"],
-};
+  title: 'Ultra Trail de la Ria | 23 Mai 2027',
+  description: 'Ultra Trail de la Ria d\'Etel - Une grande fete du trail en Bretagne. 80km Ultra, Relais Duo, 30km. Traversee bateau, nature preservee Natura 2000.',
+  keywords: 'trail, ultra trail, ria etel, bretagne, course nature, 80km, relais, running',
+  openGraph: {
+    title: 'Ultra Trail de la Ria | 23 Mai 2027',
+    description: 'Une grande fete du trail autour de la Ria d\'Etel en Bretagne',
+    type: 'website',
+    locale: 'fr_FR',
+  },
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="fr">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
         <link
           rel="stylesheet"
           href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -35,13 +34,9 @@ export default function RootLayout({
           crossOrigin=""
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Header />
-        <main>{children}</main>
-        <Footer />
+      <body className="antialiased">
+        {children}
       </body>
     </html>
-  );
+  )
 }

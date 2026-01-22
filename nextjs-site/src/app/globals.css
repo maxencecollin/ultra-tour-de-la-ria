@@ -1,113 +1,118 @@
 @import "tailwindcss";
 
-:root {
-  /* Couleurs principales inspirees du logo */
-  --color-primary: #00A0D2;
-  --color-primary-dark: #007BA7;
-  --color-dark: #1a1a1a;
-  --color-light: #f8f9fa;
-  --color-text: #1a1a1a;
-  --color-text-light: #555555;
+@theme {
+  /* Palette UTR - Ultra Trail de la Ria */
+  --color-ocean-900: #0c1929;
+  --color-ocean-800: #0f2942;
+  --color-ocean-700: #143a5c;
+  --color-ocean-600: #1a4d77;
+  --color-ocean-500: #1e5f94;
+  --color-ocean-400: #3a7eb3;
+  --color-ocean-300: #5a9fd3;
+  --color-ocean-200: #8dc2e8;
+  --color-ocean-100: #c5e3f6;
+  --color-ocean-50: #e8f4fc;
 
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-pinede-900: #0d2818;
+  --color-pinede-800: #14472a;
+  --color-pinede-700: #1b663c;
+  --color-pinede-600: #22854e;
+  --color-pinede-500: #2a9d5c;
+  --color-pinede-400: #4db87a;
+  --color-pinede-300: #70d398;
+  --color-pinede-200: #a3e5bd;
+  --color-pinede-100: #d1f2de;
+  --color-pinede-50: #ecfaf1;
+
+  --color-sable-900: #4a2c0a;
+  --color-sable-800: #6d3f0d;
+  --color-sable-700: #915310;
+  --color-sable-600: #b56814;
+  --color-sable-500: #d97e1a;
+  --color-sable-400: #e59a42;
+  --color-sable-300: #f0b76a;
+  --color-sable-200: #f7d4a0;
+  --color-sable-100: #fbeacf;
+  --color-sable-50: #fdf6eb;
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Montserrat', system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: #00A0D2;
-  --color-primary-dark: #007BA7;
-  --color-dark: #1a1a1a;
-  --color-light: #f8f9fa;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Smooth scroll */
+/* Base styles */
 html {
   scroll-behavior: smooth;
 }
 
-/* Hero Video */
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  object-fit: cover;
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-ocean-900);
+  color: white;
 }
 
-/* Scroll indicator animation */
-@keyframes scrollDown {
-  0% { opacity: 1; top: 8px; }
-  100% { opacity: 0; top: 32px; }
-}
-
-.scroll-indicator-dot {
-  animation: scrollDown 2s infinite;
-}
-
-/* Race card hover effect */
-.race-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.race-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Gallery image hover */
-.gallery-image {
-  transition: transform 0.3s ease;
-}
-
-.gallery-image:hover {
-  transform: scale(1.03);
-}
-
-/* Map container */
-.map-container {
-  height: 500px;
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-/* Elevation profile */
-.elevation-profile {
-  height: 200px;
-  width: 100%;
-}
-
-/* Mobile menu animation */
-.mobile-menu {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Button transitions */
-.btn-transition {
-  transition: all 0.3s ease;
-}
-
-.btn-transition:hover {
-  transform: translateY(-2px);
-}
-
-/* Leaflet overrides */
+/* Leaflet fixes for dark theme */
 .leaflet-container {
-  height: 100%;
-  width: 100%;
-  border-radius: 8px;
+  background: var(--color-ocean-800) !important;
+  border-radius: 0.75rem;
+}
+
+.leaflet-popup-content-wrapper {
+  background: var(--color-ocean-800);
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.leaflet-popup-tip {
+  background: var(--color-ocean-800);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ocean-800);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-ocean-600);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ocean-500);
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(217, 126, 26, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(217, 126, 26, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* GPX Track colors */
+.gpx-ultra {
+  stroke: var(--color-sable-500);
+}
+
+.gpx-relais-a {
+  stroke: var(--color-ocean-400);
+}
+
+.gpx-relais-b {
+  stroke: var(--color-sable-400);
+}
+
+.gpx-30km {
+  stroke: var(--color-pinede-500);
 }
