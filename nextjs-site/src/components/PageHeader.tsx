@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { getAssetPath } from '@/lib/utils'
 
 interface PageHeaderProps {
   title: string
@@ -15,7 +16,7 @@ export default function PageHeader({ title, subtitle, backgroundImage }: PageHea
       {backgroundImage ? (
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${backgroundImage})` }}
+          style={{ backgroundImage: `url(${getAssetPath(backgroundImage)})` }}
         >
           <div className="absolute inset-0 bg-dark-900/70" />
         </div>

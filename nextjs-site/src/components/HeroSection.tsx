@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { EVENT_DATE, races } from '@/data/races'
+import { getAssetPath } from '@/lib/utils'
 
 interface HeroSectionProps {
   onRaceSelect: (raceId: string) => void
@@ -19,7 +20,7 @@ export default function HeroSection({ onRaceSelect }: HeroSectionProps) {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/images/drone/drone-1.mp4" type="video/mp4" />
+          <source src={getAssetPath('/images/drone/drone-1.mp4')} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-white" />
       </div>

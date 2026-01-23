@@ -1,4 +1,5 @@
 import gpxParser from 'gpxparser'
+import { getAssetPath } from './utils'
 
 export interface GpxPoint {
   lat: number
@@ -28,7 +29,7 @@ export interface ParsedGpx {
 }
 
 export async function parseGpxFile(url: string): Promise<ParsedGpx> {
-  const response = await fetch(url)
+  const response = await fetch(getAssetPath(url))
   if (!response.ok) {
     throw new Error(`Failed to fetch GPX file: ${response.status}`)
   }
