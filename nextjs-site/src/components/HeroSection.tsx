@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { EVENT_DATE, races } from '@/data/races'
 
 interface HeroSectionProps {
@@ -22,7 +21,7 @@ export default function HeroSection({ onRaceSelect }: HeroSectionProps) {
         >
           <source src="/images/drone/drone-1.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-ocean-900/70 via-ocean-900/50 to-ocean-900" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-white" />
       </div>
 
       {/* Content */}
@@ -32,29 +31,27 @@ export default function HeroSection({ onRaceSelect }: HeroSectionProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Logo paysage */}
-          <motion.div
+          {/* Titre */}
+          <motion.h1
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-8"
           >
-            <Image
-              src="/images/logo_paysage.png"
-              alt="Ultra Trail de la Ria"
-              width={600}
-              height={200}
-              className="mx-auto max-w-full h-auto"
-              priority
-            />
-          </motion.div>
+            <span className="block text-5xl md:text-7xl lg:text-8xl font-display font-black text-white tracking-tight drop-shadow-lg">
+              ULTRA TRAIL
+            </span>
+            <span className="block text-3xl md:text-5xl lg:text-6xl font-display font-bold text-ria-400 mt-2 drop-shadow-md">
+              DE LA RIA D'ETEL
+            </span>
+          </motion.h1>
 
           {/* Tagline */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-xl md:text-2xl text-ocean-200 mb-2 font-light"
+            className="text-xl md:text-2xl text-white/90 mb-2 font-light drop-shadow-md"
           >
             Une grande fete du trail en Bretagne
           </motion.p>
@@ -64,9 +61,9 @@ export default function HeroSection({ onRaceSelect }: HeroSectionProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="inline-block bg-sable-500/20 border border-sable-500/40 rounded-full px-6 py-2 mb-12"
+            className="inline-block bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-2 mb-12"
           >
-            <span className="text-sable-300 font-semibold text-lg">{EVENT_DATE}</span>
+            <span className="text-white font-semibold text-lg drop-shadow-sm">{EVENT_DATE}</span>
           </motion.div>
 
           {/* CTA Buttons */}
@@ -87,12 +84,12 @@ export default function HeroSection({ onRaceSelect }: HeroSectionProps) {
                 onClick={() => onRaceSelect(race.id)}
                 className={`
                   px-8 py-4 rounded-lg font-display font-bold text-lg
-                  transition-all duration-300
+                  transition-all duration-300 shadow-lg
                   ${race.id === 'ultra'
-                    ? 'bg-sable-500 hover:bg-sable-400 text-white animate-pulse-glow'
+                    ? 'bg-dark-900 hover:bg-dark-800 text-white'
                     : race.id === 'relais'
-                    ? 'bg-ocean-500 hover:bg-ocean-400 text-white'
-                    : 'bg-pinede-600 hover:bg-pinede-500 text-white'
+                    ? 'bg-ria-500 hover:bg-ria-600 text-white'
+                    : 'bg-white hover:bg-dark-50 text-dark-900 border border-dark-200'
                   }
                 `}
               >
@@ -115,7 +112,7 @@ export default function HeroSection({ onRaceSelect }: HeroSectionProps) {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="text-ocean-300"
+            className="text-dark-400"
           >
             <svg
               className="w-8 h-8"

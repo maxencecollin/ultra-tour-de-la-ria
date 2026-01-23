@@ -1,7 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Palette UTR - Ultra Trail de la Ria */
+  /* Palette UTR - Ultra Trail de la Ria (Theme clair) */
+
+  /* Bleu Ria - couleur principale du logo */
+  --color-ria-900: #1a3a5c;
+  --color-ria-800: #1e4a73;
+  --color-ria-700: #245a8a;
+  --color-ria-600: #2a6a9f;
+  --color-ria-500: #4a90d9;
+  --color-ria-400: #6ba8e5;
+  --color-ria-300: #8dc0ef;
+  --color-ria-200: #b8d9f7;
+  --color-ria-100: #e0f0fc;
+  --color-ria-50: #f0f8ff;
+
+  /* Gris/Noir pour le texte */
+  --color-dark-900: #111111;
+  --color-dark-800: #1f1f1f;
+  --color-dark-700: #333333;
+  --color-dark-600: #4a4a4a;
+  --color-dark-500: #666666;
+  --color-dark-400: #888888;
+  --color-dark-300: #aaaaaa;
+  --color-dark-200: #cccccc;
+  --color-dark-100: #e5e5e5;
+  --color-dark-50: #f5f5f5;
+
+  /* Ocean (conserve pour compatibilite) */
   --color-ocean-900: #0c1929;
   --color-ocean-800: #0f2942;
   --color-ocean-700: #143a5c;
@@ -13,6 +39,7 @@
   --color-ocean-100: #c5e3f6;
   --color-ocean-50: #e8f4fc;
 
+  /* Pinede - vert */
   --color-pinede-900: #0d2818;
   --color-pinede-800: #14472a;
   --color-pinede-700: #1b663c;
@@ -24,6 +51,7 @@
   --color-pinede-100: #d1f2de;
   --color-pinede-50: #ecfaf1;
 
+  /* Sable - accent */
   --color-sable-900: #4a2c0a;
   --color-sable-800: #6d3f0d;
   --color-sable-700: #915310;
@@ -40,59 +68,60 @@
   --font-display: 'Montserrat', system-ui, sans-serif;
 }
 
-/* Base styles */
+/* Base styles - Theme clair */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-ocean-900);
-  color: white;
+  background-color: #ffffff;
+  color: var(--color-dark-800);
 }
 
-/* Leaflet fixes for dark theme */
+/* Leaflet fixes for light theme */
 .leaflet-container {
-  background: var(--color-ocean-800) !important;
+  background: #f5f5f5 !important;
   border-radius: 0.75rem;
 }
 
 .leaflet-popup-content-wrapper {
-  background: var(--color-ocean-800);
-  color: white;
+  background: white;
+  color: var(--color-dark-800);
   border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .leaflet-popup-tip {
-  background: var(--color-ocean-800);
+  background: white;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - light theme */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-ocean-800);
+  background: var(--color-dark-100);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-ocean-600);
+  background: var(--color-dark-300);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-ocean-500);
+  background: var(--color-dark-400);
 }
 
 /* Animations */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(217, 126, 26, 0.3);
+    box-shadow: 0 0 20px rgba(74, 144, 217, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(217, 126, 26, 0.6);
+    box-shadow: 0 0 40px rgba(74, 144, 217, 0.6);
   }
 }
 
@@ -102,15 +131,15 @@ body {
 
 /* GPX Track colors */
 .gpx-ultra {
-  stroke: var(--color-sable-500);
+  stroke: var(--color-dark-800);
 }
 
 .gpx-relais-a {
-  stroke: var(--color-ocean-400);
+  stroke: var(--color-ria-500);
 }
 
 .gpx-relais-b {
-  stroke: var(--color-sable-400);
+  stroke: var(--color-ria-400);
 }
 
 .gpx-30km {

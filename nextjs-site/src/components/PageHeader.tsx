@@ -17,10 +17,10 @@ export default function PageHeader({ title, subtitle, backgroundImage }: PageHea
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         >
-          <div className="absolute inset-0 bg-ocean-900/80" />
+          <div className="absolute inset-0 bg-dark-900/70" />
         </div>
       ) : (
-        <div className="absolute inset-0 bg-gradient-to-b from-ocean-800 to-ocean-900" />
+        <div className="absolute inset-0 bg-gradient-to-b from-dark-900 to-dark-800" />
       )}
 
       {/* Content */}
@@ -38,7 +38,7 @@ export default function PageHeader({ title, subtitle, backgroundImage }: PageHea
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-ocean-300 text-lg md:text-xl max-w-2xl mx-auto"
+            className="text-dark-300 text-lg md:text-xl max-w-2xl mx-auto"
           >
             {subtitle}
           </motion.p>

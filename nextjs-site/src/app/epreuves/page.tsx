@@ -11,8 +11,8 @@ import { races, type Race, type RaceFormat } from '@/data/races'
 const InteractiveMap = dynamic(() => import('@/components/InteractiveMap'), {
   ssr: false,
   loading: () => (
-    <div className="w-full h-[400px] bg-ocean-800 rounded-xl flex items-center justify-center">
-      <div className="w-12 h-12 border-4 border-ocean-400 border-t-transparent rounded-full animate-spin" />
+    <div className="w-full h-[400px] bg-dark-100 rounded-xl flex items-center justify-center">
+      <div className="w-12 h-12 border-4 border-ria-500 border-t-transparent rounded-full animate-spin" />
     </div>
   ),
 })
@@ -22,7 +22,7 @@ export default function Epreuves() {
   const currentRace = races.find((r) => r.id === selectedRace) as Race
 
   return (
-    <main className="min-h-screen bg-ocean-900">
+    <main className="min-h-screen bg-white">
       <PageHeader
         title="Les Epreuves"
         subtitle="Trois formats pour vivre l'aventure de la Ria d'Etel"
@@ -39,19 +39,19 @@ export default function Epreuves() {
                 onClick={() => setSelectedRace(race.id)}
                 whileHover={{ y: -4 }}
                 className={`
-                  relative text-left p-6 rounded-2xl transition-all duration-300
+                  relative text-left p-6 rounded-2xl transition-all duration-300 border
                   ${selectedRace === race.id
-                    ? 'bg-ocean-700 ring-2 ring-sable-500'
-                    : 'bg-ocean-800 hover:bg-ocean-750'
+                    ? 'bg-white shadow-xl border-ria-500 ring-2 ring-ria-500'
+                    : 'bg-white shadow-md border-dark-100 hover:shadow-lg hover:border-dark-200'
                   }
                 `}
               >
                 {selectedRace === race.id && (
-                  <div className="absolute top-4 right-4 w-3 h-3 rounded-full bg-sable-500" />
+                  <div className="absolute top-4 right-4 w-3 h-3 rounded-full bg-ria-500" />
                 )}
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
-                  style={{ backgroundColor: `${race.gpxTracks[0].color}20` }}
+                  style={{ backgroundColor: `${race.gpxTracks[0].color}15` }}
                 >
                   <span
                     className="font-display font-bold text-lg"
@@ -60,18 +60,18 @@ export default function Epreuves() {
                     {race.distance}
                   </span>
                 </div>
-                <h3 className="font-display font-bold text-xl text-white mb-2">
+                <h3 className="font-display font-bold text-xl text-dark-900 mb-2">
                   {race.name}
                 </h3>
-                <p className="text-ocean-300 text-sm mb-4">{race.description}</p>
+                <p className="text-dark-500 text-sm mb-4">{race.description}</p>
                 <div className="flex gap-4 text-sm">
-                  <span className="text-ocean-400">
+                  <span className="text-dark-400">
                     D+{race.elevation}m
                   </span>
-                  <span className="text-ocean-400">
+                  <span className="text-dark-400">
                     {race.startTime}
                   </span>
-                  <span className="text-sable-400 font-semibold">
+                  <span className="text-ria-600 font-semibold">
                     {race.price}EUR
                   </span>
                 </div>
@@ -82,7 +82,7 @@ export default function Epreuves() {
       </section>
 
       {/* Selected Race Details */}
-      <section className="py-12 px-4 bg-ocean-800/50">
+      <section className="py-12 px-4 bg-dark-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             key={selectedRace}
@@ -93,14 +93,14 @@ export default function Epreuves() {
             {/* Race Header */}
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
               <div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-2">
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 mb-2">
                   {currentRace.name}
                 </h2>
-                <p className="text-ocean-300 text-lg">{currentRace.longDescription}</p>
+                <p className="text-dark-600 text-lg">{currentRace.longDescription}</p>
               </div>
               <Link
                 href="/inscription"
-                className="inline-flex items-center justify-center bg-sable-500 hover:bg-sable-400 text-white px-8 py-4 rounded-xl font-display font-bold text-lg transition-colors whitespace-nowrap"
+                className="inline-flex items-center justify-center bg-ria-500 hover:bg-ria-600 text-white px-8 py-4 rounded-xl font-display font-bold text-lg transition-colors whitespace-nowrap"
               >
                 S'inscrire - {currentRace.price}EUR
               </Link>
@@ -133,14 +133,14 @@ export default function Epreuves() {
             {/* Map and Elevation */}
             <div className="grid lg:grid-cols-2 gap-6 mb-8">
               <div>
-                <h3 className="font-display font-bold text-white mb-4">Parcours</h3>
+                <h3 className="font-display font-bold text-dark-900 mb-4">Parcours</h3>
                 <InteractiveMap
                   tracks={currentRace.gpxTracks}
                   className="h-[400px]"
                 />
               </div>
               <div>
-                <h3 className="font-display font-bold text-white mb-4">Profil</h3>
+                <h3 className="font-display font-bold text-dark-900 mb-4">Profil</h3>
                 {currentRace.gpxTracks.map((track) => (
                   <ElevationProfile
                     key={track.id}
@@ -151,15 +151,15 @@ export default function Epreuves() {
                 ))}
 
                 {/* Download GPX */}
-                <div className="bg-ocean-800 rounded-xl p-4">
-                  <p className="text-ocean-400 text-sm mb-3">Telecharger les traces GPX</p>
+                <div className="bg-white rounded-xl p-4 shadow-sm border border-dark-100">
+                  <p className="text-dark-500 text-sm mb-3">Telecharger les traces GPX</p>
                   <div className="flex flex-wrap gap-2">
                     {currentRace.gpxTracks.map((track) => (
                       <a
                         key={track.id}
                         href={track.file}
                         download
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-ocean-700 hover:bg-ocean-600 rounded-lg text-sm text-white transition-colors"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-dark-100 hover:bg-dark-200 rounded-lg text-sm text-dark-700 transition-colors"
                       >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -175,23 +175,23 @@ export default function Epreuves() {
             {/* Segments for Relais */}
             {currentRace.segments && (
               <div className="mb-8">
-                <h3 className="font-display font-bold text-white mb-4">Segments du Relais</h3>
+                <h3 className="font-display font-bold text-dark-900 mb-4">Segments du Relais</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   {currentRace.segments.map((segment, index) => (
                     <div
                       key={segment.id}
-                      className="bg-ocean-800 rounded-xl p-6"
-                      style={{ borderLeft: `4px solid ${currentRace.gpxTracks[index]?.color || '#fff'}` }}
+                      className="bg-white rounded-xl p-6 shadow-sm"
+                      style={{ borderLeft: `4px solid ${currentRace.gpxTracks[index]?.color || '#333'}` }}
                     >
                       <div className="flex items-center justify-between mb-3">
-                        <h4 className="font-display font-bold text-white">
+                        <h4 className="font-display font-bold text-dark-900">
                           {segment.name} - {segment.description}
                         </h4>
-                        <span className="text-ocean-400 text-sm">
+                        <span className="text-dark-500 text-sm">
                           {segment.distance}km - D+{segment.elevation}m
                         </span>
                       </div>
-                      <p className="text-ocean-300">
+                      <p className="text-dark-600">
                         {segment.startLocation} → {segment.endLocation}
                       </p>
                     </div>
@@ -202,16 +202,16 @@ export default function Epreuves() {
 
             {/* Barrier Time */}
             {currentRace.barrierTime && (
-              <div className="bg-sable-500/10 border border-sable-500/30 rounded-xl p-6 mb-8">
+              <div className="bg-ria-50 border border-ria-200 rounded-xl p-6 mb-8">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-sable-500/20 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-sable-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 rounded-xl bg-ria-100 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-ria-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sable-400 text-sm">Barriere horaire</p>
-                    <p className="text-white font-bold text-xl">{currentRace.barrierTime}</p>
+                    <p className="text-ria-600 text-sm">Barriere horaire</p>
+                    <p className="text-dark-900 font-bold text-xl">{currentRace.barrierTime}</p>
                   </div>
                 </div>
               </div>
@@ -219,12 +219,12 @@ export default function Epreuves() {
 
             {/* Highlights and Requirements */}
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-ocean-800 rounded-xl p-6">
-                <h3 className="font-display font-bold text-white mb-4">Points forts</h3>
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-dark-100">
+                <h3 className="font-display font-bold text-dark-900 mb-4">Points forts</h3>
                 <ul className="space-y-3">
                   {currentRace.highlights.map((highlight, index) => (
-                    <li key={index} className="flex items-start gap-3 text-ocean-200">
-                      <svg className="w-5 h-5 text-pinede-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <li key={index} className="flex items-start gap-3 text-dark-700">
+                      <svg className="w-5 h-5 text-ria-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <span>{highlight}</span>
@@ -233,12 +233,12 @@ export default function Epreuves() {
                 </ul>
               </div>
 
-              <div className="bg-ocean-800 rounded-xl p-6">
-                <h3 className="font-display font-bold text-white mb-4">Conditions de participation</h3>
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-dark-100">
+                <h3 className="font-display font-bold text-dark-900 mb-4">Conditions de participation</h3>
                 <ul className="space-y-3">
                   {currentRace.requirements.map((req, index) => (
-                    <li key={index} className="flex items-start gap-3 text-ocean-200">
-                      <svg className="w-5 h-5 text-ocean-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <li key={index} className="flex items-start gap-3 text-dark-700">
+                      <svg className="w-5 h-5 text-dark-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       <span>{req}</span>
@@ -252,24 +252,24 @@ export default function Epreuves() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-dark-900">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">
             Pret a relever le defi ?
           </h2>
-          <p className="text-ocean-300 mb-8">
+          <p className="text-dark-300 mb-8">
             Rejoignez-nous le 22 Mai 2027 pour vivre une experience unique sur les sentiers de la Ria d'Etel.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/inscription"
-              className="inline-flex items-center justify-center bg-sable-500 hover:bg-sable-400 text-white px-8 py-4 rounded-xl font-display font-bold text-lg transition-colors"
+              className="inline-flex items-center justify-center bg-ria-500 hover:bg-ria-600 text-white px-8 py-4 rounded-xl font-display font-bold text-lg transition-colors"
             >
               S'inscrire maintenant
             </Link>
             <Link
               href="/infos-pratiques"
-              className="inline-flex items-center justify-center bg-ocean-700 hover:bg-ocean-600 text-white px-8 py-4 rounded-xl font-display font-bold text-lg transition-colors"
+              className="inline-flex items-center justify-center bg-white hover:bg-dark-100 text-dark-900 px-8 py-4 rounded-xl font-display font-bold text-lg transition-colors"
             >
               Voir le reglement
             </Link>
@@ -282,8 +282,8 @@ export default function Epreuves() {
 
 function StatCard({ label, value, color }: { label: string; value: string; color: string }) {
   return (
-    <div className="bg-ocean-800 rounded-xl p-4">
-      <p className="text-ocean-400 text-sm mb-1">{label}</p>
+    <div className="bg-white rounded-xl p-4 shadow-sm border border-dark-100">
+      <p className="text-dark-500 text-sm mb-1">{label}</p>
       <p className="font-display font-bold text-2xl" style={{ color }}>
         {value}
       </p>

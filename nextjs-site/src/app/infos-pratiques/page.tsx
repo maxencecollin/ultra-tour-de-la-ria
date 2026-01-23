@@ -42,7 +42,7 @@ export default function InfosPratiques() {
   const [activeSection, setActiveSection] = useState<string>('inscription')
 
   return (
-    <main className="min-h-screen bg-ocean-900">
+    <main className="min-h-screen bg-white">
       <PageHeader
         title="Infos Pratiques"
         subtitle="Tout ce que vous devez savoir pour preparer votre course"
@@ -58,8 +58,8 @@ export default function InfosPratiques() {
               className={`
                 flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all
                 ${activeSection === section.id
-                  ? 'bg-sable-500 text-white'
-                  : 'bg-ocean-800 text-ocean-300 hover:bg-ocean-700 hover:text-white'
+                  ? 'bg-ria-500 text-white'
+                  : 'bg-dark-100 text-dark-600 hover:bg-dark-200 hover:text-dark-900'
                 }
               `}
             >
@@ -73,8 +73,8 @@ export default function InfosPratiques() {
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Sidebar - Table of Contents */}
           <div className="lg:col-span-1">
-            <div className="sticky top-24 bg-ocean-800 rounded-xl p-6">
-              <h3 className="font-display font-bold text-white mb-4">Reglement</h3>
+            <div className="sticky top-24 bg-dark-50 rounded-xl p-6 border border-dark-100">
+              <h3 className="font-display font-bold text-dark-900 mb-4">Reglement</h3>
               <nav className="space-y-2">
                 {reglementSections.map((section) => (
                   <button
@@ -83,8 +83,8 @@ export default function InfosPratiques() {
                     className={`
                       w-full text-left px-3 py-2 rounded-lg text-sm transition-colors
                       ${activeSection === section.id
-                        ? 'bg-ocean-700 text-white'
-                        : 'text-ocean-400 hover:text-white hover:bg-ocean-700/50'
+                        ? 'bg-ria-100 text-ria-700'
+                        : 'text-dark-600 hover:text-dark-900 hover:bg-dark-100'
                       }
                     `}
                   >
@@ -123,10 +123,10 @@ function ReglementSectionContent({ section }: { section: ReglementSection }) {
     <div className="space-y-6">
       {/* Section Header */}
       <div className="flex items-center gap-4 mb-8">
-        <div className="w-14 h-14 rounded-xl bg-sable-500/20 flex items-center justify-center text-sable-400">
+        <div className="w-14 h-14 rounded-xl bg-ria-100 flex items-center justify-center text-ria-600">
           {icons[section.icon]}
         </div>
-        <h2 className="text-2xl md:text-3xl font-display font-bold text-white">
+        <h2 className="text-2xl md:text-3xl font-display font-bold text-dark-900">
           {section.title}
         </h2>
       </div>
@@ -136,20 +136,20 @@ function ReglementSectionContent({ section }: { section: ReglementSection }) {
         <div
           key={index}
           className={`
-            bg-ocean-800 rounded-xl p-6
-            ${item.important ? 'border-l-4 border-sable-500' : ''}
+            bg-white rounded-xl p-6 shadow-sm border
+            ${item.important ? 'border-l-4 border-ria-500 border-t border-r border-b border-dark-100' : 'border-dark-100'}
           `}
         >
           {item.title && (
-            <h3 className="font-semibold text-white text-lg mb-3">{item.title}</h3>
+            <h3 className="font-semibold text-dark-900 text-lg mb-3">{item.title}</h3>
           )}
-          <p className="text-ocean-300 leading-relaxed">{item.text}</p>
+          <p className="text-dark-600 leading-relaxed">{item.text}</p>
           {item.list && (
             <ul className="mt-4 space-y-2">
               {item.list.map((listItem, listIndex) => (
-                <li key={listIndex} className="flex items-start gap-3 text-ocean-200">
+                <li key={listIndex} className="flex items-start gap-3 text-dark-700">
                   <svg
-                    className="w-5 h-5 text-pinede-500 flex-shrink-0 mt-0.5"
+                    className="w-5 h-5 text-ria-500 flex-shrink-0 mt-0.5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

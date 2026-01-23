@@ -12,8 +12,8 @@ const links = {
   ],
   infos: [
     { label: 'Reglement', href: '/infos-pratiques' },
+    { label: 'Environnement', href: '/environnement' },
     { label: 'Parcours GPX', href: '/epreuves' },
-    { label: 'Infos Pratiques', href: '/infos-pratiques' },
   ],
   legal: [
     { label: 'Mentions legales', href: '#' },
@@ -54,7 +54,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-ocean-900 border-t border-ocean-800">
+    <footer className="bg-dark-900 border-t border-dark-800">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
@@ -67,7 +67,7 @@ export default function Footer() {
               height={140}
               className="mb-6"
             />
-            <p className="text-ocean-300 mb-6 max-w-sm">
+            <p className="text-dark-400 mb-6 max-w-sm">
               Une grande fete du trail autour de la Ria d'Etel.
               Rendez-vous le {EVENT_DATE} pour vivre une experience unique en Bretagne.
             </p>
@@ -78,7 +78,7 @@ export default function Footer() {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 rounded-lg bg-ocean-800 flex items-center justify-center text-ocean-400 hover:bg-ocean-700 hover:text-white transition-colors"
+                  className="w-10 h-10 rounded-lg bg-dark-800 flex items-center justify-center text-dark-400 hover:bg-dark-700 hover:text-white transition-colors"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -95,7 +95,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-ocean-400 hover:text-white transition-colors"
+                    className="text-dark-400 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -112,7 +112,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-ocean-400 hover:text-white transition-colors"
+                    className="text-dark-400 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -129,7 +129,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-ocean-400 hover:text-white transition-colors"
+                    className="text-dark-400 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -141,20 +141,20 @@ export default function Footer() {
       </div>
 
       {/* Partners Section */}
-      <div className="border-t border-ocean-800">
+      <div className="border-t border-dark-800">
         <div className="max-w-7xl mx-auto px-4 py-8">
-          <p className="text-ocean-500 text-sm text-center mb-6">Nos partenaires</p>
+          <p className="text-dark-500 text-sm text-center mb-6">Nos partenaires</p>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-50">
-            <div className="w-24 h-12 bg-ocean-800 rounded flex items-center justify-center text-ocean-500 text-xs">
+            <div className="w-24 h-12 bg-dark-800 rounded flex items-center justify-center text-dark-500 text-xs">
               Partenaire 1
             </div>
-            <div className="w-24 h-12 bg-ocean-800 rounded flex items-center justify-center text-ocean-500 text-xs">
+            <div className="w-24 h-12 bg-dark-800 rounded flex items-center justify-center text-dark-500 text-xs">
               Partenaire 2
             </div>
-            <div className="w-24 h-12 bg-ocean-800 rounded flex items-center justify-center text-ocean-500 text-xs">
+            <div className="w-24 h-12 bg-dark-800 rounded flex items-center justify-center text-dark-500 text-xs">
               Partenaire 3
             </div>
-            <div className="w-24 h-12 bg-ocean-800 rounded flex items-center justify-center text-ocean-500 text-xs">
+            <div className="w-24 h-12 bg-dark-800 rounded flex items-center justify-center text-dark-500 text-xs">
               Partenaire 4
             </div>
           </div>
@@ -162,9 +162,9 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-ocean-800">
+      <div className="border-t border-dark-800">
         <div className="max-w-7xl mx-auto px-4 py-6">
-          <p className="text-ocean-500 text-sm text-center">
+          <p className="text-dark-500 text-sm text-center">
             {new Date().getFullYear()} Ultra Trail de la Ria. Tous droits reserves.
           </p>
         </div>
