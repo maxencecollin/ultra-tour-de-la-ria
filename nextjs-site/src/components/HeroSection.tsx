@@ -11,16 +11,18 @@ interface HeroSectionProps {
 export default function HeroSection({ onRaceSelect }: HeroSectionProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero-bg.jpg"
-          alt="Ria d'Etel"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-ocean-900/80 via-ocean-900/60 to-ocean-900" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/images/drone/drone-1.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-ocean-900/70 via-ocean-900/50 to-ocean-900" />
       </div>
 
       {/* Content */}
@@ -30,7 +32,7 @@ export default function HeroSection({ onRaceSelect }: HeroSectionProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Logo */}
+          {/* Logo paysage */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -38,24 +40,14 @@ export default function HeroSection({ onRaceSelect }: HeroSectionProps) {
             className="mb-8"
           >
             <Image
-              src="/images/logo-white.png"
+              src="/images/logo_paysage.png"
               alt="Ultra Trail de la Ria"
-              width={200}
-              height={234}
-              className="mx-auto"
+              width={600}
+              height={200}
+              className="mx-auto max-w-full h-auto"
               priority
             />
           </motion.div>
-
-          {/* Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-4"
-          >
-            Ultra Trail de la Ria
-          </motion.h1>
 
           {/* Tagline */}
           <motion.p
