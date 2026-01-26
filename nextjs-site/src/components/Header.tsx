@@ -6,16 +6,30 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { getAssetPath } from '@/lib/utils'
 
-const navLinks = [
+interface NavLink {
+  label: string
+  href: string
+  submenu?: { label: string; href: string }[]
+}
+
+const navLinks: NavLink[] = [
   { label: 'Accueil', href: '/' },
   { label: 'Epreuves', href: '/epreuves' },
   { label: 'Environnement', href: '/environnement' },
-  { label: 'Infos Pratiques', href: '/infos-pratiques' },
+  {
+    label: 'Infos Pratiques',
+    href: '/infos-pratiques',
+    submenu: [
+      { label: 'Infos Pratiques', href: '/infos-pratiques' },
+      { label: 'Resultats', href: '/resultats' },
+    ],
+  },
 ]
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,19 +67,67 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`transition-colors font-medium ${
-                  isScrolled
-                    ? 'text-dark-600 hover:text-dark-900'
-                    : 'text-white/90 hover:text-white'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.submenu ? (
+                <div
+                  key={link.href}
+                  className="relative"
+                  onMouseEnter={() => setOpenSubmenu(link.href)}
+                  onMouseLeave={() => setOpenSubmenu(null)}
+                >
+                  <button
+                    className={`transition-colors font-medium flex items-center gap-1 ${
+                      isScrolled
+                        ? 'text-dark-600 hover:text-dark-900'
+                        : 'text-white/90 hover:text-white'
+                    }`}
+                  >
+                    {link.label}
+                    <svg
+                      className={`w-4 h-4 transition-transform ${openSubmenu === link.href ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <AnimatePresence>
+                    {openSubmenu === link.href && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.15 }}
+                        className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-dark-100 py-2 min-w-[180px]"
+                      >
+                        {link.submenu.map((sublink) => (
+                          <Link
+                            key={sublink.href}
+                            href={sublink.href}
+                            className="block px-4 py-2 text-dark-600 hover:text-dark-900 hover:bg-dark-50 transition-colors"
+                          >
+                            {sublink.label}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`transition-colors font-medium ${
+                    isScrolled
+                      ? 'text-dark-600 hover:text-dark-900'
+                      : 'text-white/90 hover:text-white'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
             <Link
               href="/inscription"
               className="bg-ria-500 hover:bg-ria-600 text-white px-5 py-2.5 rounded-lg font-semibold transition-colors"
@@ -118,16 +180,34 @@ export default function Header() {
             className="md:hidden bg-white/98 backdrop-blur-md border-t border-dark-100"
           >
             <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-dark-700 hover:text-dark-900 transition-colors font-medium py-3 px-4 rounded-lg hover:bg-dark-50"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) =>
+                link.submenu ? (
+                  <div key={link.href}>
+                    <div className="text-dark-400 text-sm font-medium py-2 px-4">
+                      {link.label}
+                    </div>
+                    {link.submenu.map((sublink) => (
+                      <Link
+                        key={sublink.href}
+                        href={sublink.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-dark-700 hover:text-dark-900 transition-colors font-medium py-3 px-4 pl-8 rounded-lg hover:bg-dark-50 block"
+                      >
+                        {sublink.label}
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-dark-700 hover:text-dark-900 transition-colors font-medium py-3 px-4 rounded-lg hover:bg-dark-50"
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
               <Link
                 href="/inscription"
                 onClick={() => setIsMobileMenuOpen(false)}
