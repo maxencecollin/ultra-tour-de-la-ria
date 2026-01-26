@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
@@ -17,7 +17,7 @@ const InteractiveMap = dynamic(() => import('@/components/InteractiveMap'), {
   ),
 })
 
-export default function Epreuves() {
+function EpreuvesContent() {
   const searchParams = useSearchParams()
   const raceParam = searchParams.get('race') as RaceFormat | null
   const [selectedRace, setSelectedRace] = useState<RaceFormat>('ultra')
@@ -283,5 +283,13 @@ function StatCard({ label, value, color }: { label: string; value: string; color
         {value}
       </p>
     </div>
+  )
+}
+
+export default function Epreuves() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+      <EpreuvesContent />
+    </Suspense>
   )
 }
