@@ -14,7 +14,15 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { label: 'Accueil', href: '/' },
-  { label: 'Epreuves', href: '/epreuves' },
+  {
+    label: 'Epreuves',
+    href: '/epreuves',
+    submenu: [
+      { label: 'Ultra 80km', href: '/epreuves?race=ultra' },
+      { label: 'Relais Duo 80km', href: '/epreuves?race=relais' },
+      { label: 'Trail 30km', href: '/epreuves?race=30km' },
+    ],
+  },
   { label: 'Environnement', href: '/environnement' },
   {
     label: 'Infos Pratiques',

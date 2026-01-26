@@ -1,11 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import PageHeader from '@/components/PageHeader'
-import ElevationProfile from '@/components/ElevationProfile'
 import { races, type Race, type RaceFormat } from '@/data/races'
 
 const InteractiveMap = dynamic(() => import('@/components/InteractiveMap'), {
@@ -18,8 +18,16 @@ const InteractiveMap = dynamic(() => import('@/components/InteractiveMap'), {
 })
 
 export default function Epreuves() {
+  const searchParams = useSearchParams()
+  const raceParam = searchParams.get('race') as RaceFormat | null
   const [selectedRace, setSelectedRace] = useState<RaceFormat>('ultra')
   const currentRace = races.find((r) => r.id === selectedRace) as Race
+
+  useEffect(() => {
+    if (raceParam && ['ultra', 'relais', '30km'].includes(raceParam)) {
+      setSelectedRace(raceParam)
+    }
+  }, [raceParam])
 
   return (
     <main className="min-h-screen bg-white">
@@ -125,50 +133,37 @@ export default function Epreuves() {
               />
               <StatCard
                 label="Places"
-                value={`${currentRace.maxParticipants} max`}
+                value={currentRace.id === 'relais' ? `${currentRace.maxParticipants} duos` : `${currentRace.maxParticipants}`}
                 color={currentRace.gpxTracks[0].color}
               />
             </div>
 
-            {/* Map and Elevation */}
-            <div className="grid lg:grid-cols-2 gap-6 mb-8">
-              <div>
-                <h3 className="font-display font-bold text-dark-900 mb-4">Parcours</h3>
-                <InteractiveMap
-                  tracks={currentRace.gpxTracks}
-                  className="h-[400px]"
-                />
-              </div>
-              <div>
-                <h3 className="font-display font-bold text-dark-900 mb-4">Profil</h3>
-                {currentRace.gpxTracks.map((track) => (
-                  <ElevationProfile
-                    key={track.id}
-                    gpxFile={track.file}
-                    color={track.color}
-                    className="mb-4"
-                  />
-                ))}
+            {/* Map */}
+            <div className="mb-8">
+              <h3 className="font-display font-bold text-dark-900 mb-4">Parcours</h3>
+              <InteractiveMap
+                tracks={currentRace.gpxTracks}
+                className="h-[400px]"
+              />
+            </div>
 
-                {/* Download GPX */}
-                <div className="bg-white rounded-xl p-4 shadow-sm border border-dark-100">
-                  <p className="text-dark-500 text-sm mb-3">Telecharger les traces GPX</p>
-                  <div className="flex flex-wrap gap-2">
-                    {currentRace.gpxTracks.map((track) => (
-                      <a
-                        key={track.id}
-                        href={track.file}
-                        download
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-dark-100 hover:bg-dark-200 rounded-lg text-sm text-dark-700 transition-colors"
-                      >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                        </svg>
-                        {track.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
+            {/* Download GPX */}
+            <div className="bg-white rounded-xl p-4 shadow-sm border border-dark-100 mb-8">
+              <p className="text-dark-500 text-sm mb-3">Telecharger les traces GPX</p>
+              <div className="flex flex-wrap gap-2">
+                {currentRace.gpxTracks.map((track) => (
+                  <a
+                    key={track.id}
+                    href={track.file}
+                    download
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-dark-100 hover:bg-dark-200 rounded-lg text-sm text-dark-700 transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    {track.name}
+                  </a>
+                ))}
               </div>
             </div>
 
