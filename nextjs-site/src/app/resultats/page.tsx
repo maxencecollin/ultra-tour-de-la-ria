@@ -8,7 +8,7 @@ export default function Resultats() {
     <main className="min-h-screen bg-white">
       <PageHeader
         title="Resultats"
-        subtitle="Retrouvez les resultats des editions precedentes"
+        subtitle="Retrouvez les résultats des éditions précédentes"
       />
 
       <section className="py-16 px-4">
@@ -36,12 +36,12 @@ export default function Resultats() {
             </div>
 
             <h2 className="text-2xl font-display font-bold text-dark-900 mb-4">
-              Premiere edition en 2027
+              Première édition en 2027
             </h2>
 
             <p className="text-dark-600 text-lg max-w-xl mx-auto mb-8">
               L'Ultra Trail de la Ria d'Etel est un nouvel evenement.
-              La premiere edition aura lieu le 22 mai 2027.
+              La première édition aura lieu le 22 mai 2027.
               Les resultats seront disponibles ici apres la course.
             </p>
 

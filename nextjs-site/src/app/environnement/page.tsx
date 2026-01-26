@@ -10,8 +10,8 @@ const engagements = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
       </svg>
     ),
-    title: 'Zero dechet',
-    description: 'Aucun gobelet jetable sur les ravitaillements. Chaque coureur doit apporter son propre contenant reutilisable.',
+    title: 'Zéro déchet',
+    description: 'Aucun gobelet jetable sur les ravitaillements. Chaque coureur doit apporter son propre contenant réutilisable.',
   },
   {
     icon: (
@@ -28,8 +28,8 @@ const engagements = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
       </svg>
     ),
-    title: 'Signaletique reutilisable',
-    description: 'Le balisage et la signaletique sont concus pour etre reutilises d\'une edition a l\'autre.',
+    title: 'Signalétique réutilisable',
+    description: 'Le balisage et la signalétique sont conçus pour être réutilisés d\'une édition à l\'autre.',
   },
   {
     icon: (
@@ -38,34 +38,34 @@ const engagements = [
       </svg>
     ),
     title: 'Covoiturage',
-    description: 'Nous encourageons le covoiturage et les transports en commun pour reduire l\'empreinte carbone.',
+    description: 'Nous encourageons le covoiturage et les transports en commun pour réduire l\'empreinte carbone.',
   },
 ]
 
 const regles = [
   {
-    title: 'Aucun dechet sur le parcours',
-    description: 'Meme les dechets biodegradables (peaux de banane, trognons) doivent etre conserves jusqu\'au prochain ravitaillement.',
+    title: 'Aucun déchet sur le parcours',
+    description: 'Même les déchets biodégradables (peaux de banane, trognons) doivent être conservés jusqu\'au prochain ravitaillement.',
     important: true,
   },
   {
-    title: 'Restez sur les sentiers balises',
-    description: 'Ne coupez jamais a travers la vegetation. Les sentiers sont traces pour proteger les ecosystemes fragiles.',
+    title: 'Restez sur les sentiers balisés',
+    description: 'Ne coupez jamais à travers la végétation. Les sentiers sont tracés pour protéger les écosystèmes fragiles.',
     important: true,
   },
   {
     title: 'Respectez la faune et la flore',
-    description: 'Ne cueillez pas de plantes, ne derangez pas les animaux. Vous traversez leur habitat naturel.',
+    description: 'Ne cueillez pas de plantes, ne dérangez pas les animaux. Vous traversez leur habitat naturel.',
     important: false,
   },
   {
-    title: 'Utilisez les toilettes seches',
-    description: 'Des toilettes seches sont mises a disposition sur le parcours. Utilisez-les pour preserver les milieux naturels.',
+    title: 'Utilisez les toilettes sèches',
+    description: 'Des toilettes sèches sont mises à disposition sur le parcours. Utilisez-les pour préserver les milieux naturels.',
     important: false,
   },
   {
-    title: 'Respectez les proprietes privees',
-    description: 'Le parcours traverse parfois des terrains prives. Restez sur le trace et ne vous ecartez pas.',
+    title: 'Respectez les propriétés privées',
+    description: 'Le parcours traverse parfois des terrains privés. Restez sur le tracé et ne vous écartez pas.',
     important: false,
   },
 ]
@@ -75,7 +75,7 @@ export default function Environnement() {
     <main className="min-h-screen bg-white">
       <PageHeader
         title="Environnement"
-        subtitle="Ensemble, preservons la Ria d'Etel"
+        subtitle="Ensemble, préservons la Ria d'Étel"
       />
 
       {/* Introduction */}
@@ -91,7 +91,7 @@ export default function Environnement() {
               Un patrimoine naturel exceptionnel
             </h2>
             <p className="text-lg text-dark-600 leading-relaxed mb-8">
-              La Ria d'Etel est un joyau naturel de la Bretagne. Cette ancienne vallee fluviale envahie par la mer abrite une biodiversite remarquable : oiseaux migrateurs, poissons, crustaces et une flore unique. En participant a l'Ultra Trail de la Ria, vous traversez des sites naturels proteges qui meritent tout notre respect.
+              La Ria d'Étel est un joyau naturel de la Bretagne. Cette ancienne vallée fluviale envahie par la mer abrite une biodiversité remarquable : oiseaux migrateurs, poissons, crustacés et une flore unique. En participant à l'Ultra Trail de la Ria, vous traversez des sites naturels protégés qui méritent tout notre respect.
             </p>
           </motion.div>
         </div>
@@ -108,10 +108,10 @@ export default function Environnement() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 mb-4">
-              Zones protegees traversees
+              Zones protégées traversées
             </h2>
             <p className="text-dark-600 max-w-2xl mx-auto">
-              Le parcours de l'Ultra Trail de la Ria traverse plusieurs zones beneficiant de protections environnementales.
+              Le parcours de l'Ultra Trail de la Ria traverse plusieurs zones bénéficiant de protections environnementales.
             </p>
           </motion.div>
 
@@ -130,7 +130,7 @@ export default function Environnement() {
               </div>
               <h3 className="text-xl font-bold text-dark-900 mb-2">Natura 2000</h3>
               <p className="text-dark-600 text-sm">
-                La Ria d'Etel fait partie du reseau europeen Natura 2000, qui vise a preserver la biodiversite tout en tenant compte des activites humaines.
+                La Ria d'Étel fait partie du réseau européen Natura 2000, qui vise à préserver la biodiversité tout en tenant compte des activités humaines.
               </p>
             </motion.div>
 
@@ -148,7 +148,7 @@ export default function Environnement() {
               </div>
               <h3 className="text-xl font-bold text-dark-900 mb-2">ZNIEFF</h3>
               <p className="text-dark-600 text-sm">
-                Zones Naturelles d'Interet Ecologique, Faunistique et Floristique. Ces espaces abritent des especes rares et des habitats remarquables.
+                Zones Naturelles d'Intérêt Écologique, Faunistique et Floristique. Ces espaces abritent des espèces rares et des habitats remarquables.
               </p>
             </motion.div>
 
@@ -164,9 +164,9 @@ export default function Environnement() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-dark-900 mb-2">Sites classes</h3>
+              <h3 className="text-xl font-bold text-dark-900 mb-2">Sites classés</h3>
               <p className="text-dark-600 text-sm">
-                Plusieurs sites le long du parcours sont classes pour leur interet paysager et patrimonial exceptionnel.
+                Plusieurs sites le long du parcours sont classés pour leur intérêt paysager et patrimonial exceptionnel.
               </p>
             </motion.div>
           </div>
@@ -187,7 +187,7 @@ export default function Environnement() {
               Nos engagements
             </h2>
             <p className="text-dark-600 max-w-2xl mx-auto">
-              L'organisation de l'Ultra Trail de la Ria s'engage dans une demarche eco-responsable pour minimiser l'impact de l'evenement.
+              L'organisation de l'Ultra Trail de la Ria s'engage dans une démarche éco-responsable pour minimiser l'impact de l'événement.
             </p>
           </motion.div>
 
@@ -223,10 +223,10 @@ export default function Environnement() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 mb-4">
-              Les regles a respecter
+              Les règles à respecter
             </h2>
             <p className="text-dark-600 max-w-2xl mx-auto">
-              En tant que coureur, vous etes acteur de la preservation de notre environnement. Le non-respect de ces regles entraine la disqualification.
+              En tant que coureur, vous êtes acteur de la préservation de notre environnement. Le non-respect de ces règles entraîne la disqualification.
             </p>
           </motion.div>
 
@@ -283,14 +283,14 @@ export default function Environnement() {
               Courir en conscience
             </h2>
             <p className="text-ria-100 mb-6 max-w-2xl mx-auto">
-              Participer a l'Ultra Trail de la Ria, c'est s'engager a respecter un environnement fragile et precieux. Ensemble, faisons de cet evenement un exemple de trail responsable.
+              Participer à l'Ultra Trail de la Ria, c'est s'engager à respecter un environnement fragile et précieux. Ensemble, faisons de cet événement un exemple de trail responsable.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="/infos-pratiques"
                 className="px-6 py-3 bg-white text-ria-600 font-semibold rounded-lg hover:bg-ria-50 transition-colors"
               >
-                Voir le reglement complet
+                Voir le règlement complet
               </a>
             </div>
           </motion.div>

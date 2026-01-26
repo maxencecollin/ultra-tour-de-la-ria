@@ -7,7 +7,7 @@ const features = [
   {
     id: 'bateau',
     title: 'Traversee Bateau',
-    description: 'Une experience unique : traversez la Ria d\'Etel en bateau. Ce passage maritime, temps neutralise, offre une pause contemplative au coeur de votre effort.',
+    description: 'Une expérience unique : traversez la Ria d\'Étel en bateau. Ce passage maritime, temps neutralisé, offre une pause contemplative au cœur de votre effort.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 17h18M5 17l-2 4M19 17l2 4M12 3v4m0 0l4 4H8l4-4zM6 9v4a6 6 0 0012 0V9" />
@@ -57,7 +57,7 @@ export default function EspritRiaSection() {
             L'Esprit Ria
           </h2>
           <p className="text-ocean-300 text-lg max-w-2xl mx-auto">
-            Plus qu'une course, une experience authentique au coeur de la Bretagne maritime
+            Plus qu'une course, une expérience authentique au cœur de la Bretagne maritime
           </p>
         </motion.div>
 
@@ -119,7 +119,7 @@ export default function EspritRiaSection() {
           {[
             { src: '/images/HODM5670-web.jpg', alt: 'Course UTR' },
             { src: '/images/IEAP5443-web.jpg', alt: 'Paysage Ria' },
-            { src: '/images/XBGL5940-web.jpg', alt: 'Sentier cotier' },
+            { src: '/images/XBGL5940-web.jpg', alt: 'Sentier côtier' },
             { src: '/images/XGXK9412-web.jpg', alt: 'Arrivee UTR' },
           ].map((image, index) => (
             <motion.div

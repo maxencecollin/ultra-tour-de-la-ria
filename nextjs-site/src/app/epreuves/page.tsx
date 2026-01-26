@@ -33,7 +33,7 @@ function EpreuvesContent() {
     <main className="min-h-screen bg-white">
       <PageHeader
         title="Les Epreuves"
-        subtitle="Trois formats pour vivre l'aventure de la Ria d'Etel"
+        subtitle="Trois formats pour vivre l'aventure de la Ria d'Étel"
         backgroundImage="/images/hero-bg.jpg"
       />
 
@@ -250,10 +250,10 @@ function EpreuvesContent() {
       <section className="py-16 px-4 bg-dark-900">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">
-            Pret a relever le defi ?
+            Prêt à relever le défi ?
           </h2>
           <p className="text-dark-300 mb-8">
-            Rejoignez-nous le 22 Mai 2027 pour vivre une experience unique sur les sentiers de la Ria d'Etel.
+            Rejoignez-nous le 22 mai 2027 pour vivre une expérience unique sur les sentiers de la Ria d'Étel.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

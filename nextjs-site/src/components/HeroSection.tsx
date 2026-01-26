@@ -1,14 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { EVENT_DATE, races } from '@/data/races'
+import Link from 'next/link'
+import { EVENT_DATE } from '@/data/races'
 import { getAssetPath } from '@/lib/utils'
 
-interface HeroSectionProps {
-  onRaceSelect: (raceId: string) => void
-}
-
-export default function HeroSection({ onRaceSelect }: HeroSectionProps) {
+export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
@@ -54,7 +51,7 @@ export default function HeroSection({ onRaceSelect }: HeroSectionProps) {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-xl md:text-2xl text-white/90 mb-2 font-light drop-shadow-md"
           >
-            Une grande fete du trail en Bretagne
+            Une grande fête du trail en Bretagne
           </motion.p>
 
           {/* Date */}
@@ -67,39 +64,21 @@ export default function HeroSection({ onRaceSelect }: HeroSectionProps) {
             <span className="text-white font-semibold text-lg drop-shadow-sm">{EVENT_DATE}</span>
           </motion.div>
 
-          {/* CTA Buttons */}
+          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-wrap justify-center gap-4"
           >
-            {races.map((race, index) => (
-              <motion.button
-                key={race.id}
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 1 + index * 0.1 }}
-                onClick={() => onRaceSelect(race.id)}
-                className={`
-                  px-8 py-4 rounded-lg font-display font-bold text-lg
-                  transition-all duration-300 shadow-lg
-                  ${race.id === 'ultra'
-                    ? 'bg-dark-900 hover:bg-dark-800 text-white'
-                    : race.id === 'relais'
-                    ? 'bg-ria-500 hover:bg-ria-600 text-white'
-                    : 'bg-white hover:bg-dark-50 text-dark-900 border border-dark-200'
-                  }
-                `}
-              >
-                {race.shortName}
-                <span className="block text-xs font-normal opacity-80 mt-1">
-                  {race.distance}km - D+{race.elevation}m
-                </span>
-              </motion.button>
-            ))}
+            <Link
+              href="/inscription"
+              className="inline-flex items-center gap-2 bg-ria-500 hover:bg-ria-600 text-white px-8 py-4 rounded-xl font-display font-bold text-lg transition-colors shadow-lg"
+            >
+              S'inscrire
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           </motion.div>
         </motion.div>
 

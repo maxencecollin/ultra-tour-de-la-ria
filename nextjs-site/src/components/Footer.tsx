@@ -12,13 +12,13 @@ const links = {
     { label: 'Le 30km', href: '/epreuves' },
   ],
   infos: [
-    { label: 'Reglement', href: '/infos-pratiques' },
+    { label: 'Règlement', href: '/infos-pratiques' },
     { label: 'Environnement', href: '/environnement' },
     { label: 'Parcours GPX', href: '/epreuves' },
   ],
   legal: [
-    { label: 'Mentions legales', href: '#' },
-    { label: 'Politique de confidentialite', href: '#' },
+    { label: 'Mentions légales', href: '#' },
+    { label: 'Politique de confidentialité', href: '#' },
     { label: 'CGV', href: '#' },
   ],
 }
@@ -69,8 +69,8 @@ export default function Footer() {
               className="mb-6"
             />
             <p className="text-dark-400 mb-6 max-w-sm">
-              Une grande fete du trail autour de la Ria d'Etel.
-              Rendez-vous le {EVENT_DATE} pour vivre une experience unique en Bretagne.
+              Une grande fête du trail autour de la Ria d'Étel.
+              Rendez-vous le {EVENT_DATE} pour vivre une expérience unique en Bretagne.
             </p>
 
             {/* Social Links */}
