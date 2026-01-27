@@ -6,21 +6,27 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { getAssetPath } from '@/lib/utils'
 
+interface SubLink {
+  label: string
+  href: string
+  external?: boolean
+}
+
 interface NavLink {
   label: string
   href: string
-  submenu?: { label: string; href: string }[]
+  submenu?: SubLink[]
 }
 
 const navLinks: NavLink[] = [
   { label: 'Accueil', href: '/' },
   {
-    label: 'Epreuves',
+    label: 'Épreuves',
     href: '/epreuves',
     submenu: [
-      { label: 'Ultra 80km', href: '/epreuves?race=ultra' },
-      { label: 'Relais Duo 80km', href: '/epreuves?race=relais' },
-      { label: 'Trail 30km', href: '/epreuves?race=30km' },
+      { label: 'Le 80km', href: '/epreuves/ultra' },
+      { label: 'Le Relais Duo', href: '/epreuves/relais' },
+      { label: 'Le 30km', href: '/epreuves/30km' },
     ],
   },
   { label: 'Environnement', href: '/environnement' },
@@ -29,7 +35,8 @@ const navLinks: NavLink[] = [
     href: '/infos-pratiques',
     submenu: [
       { label: 'Infos Pratiques', href: '/infos-pratiques' },
-      { label: 'Resultats', href: '/resultats' },
+      { label: 'Règlement', href: '/docs/Reglement_Ultra_Trail_Ria_2027.pdf', external: true },
+      { label: 'Résultats', href: '/resultats' },
     ],
   },
 ]
@@ -109,15 +116,27 @@ export default function Header() {
                         transition={{ duration: 0.15 }}
                         className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-dark-100 py-2 min-w-[180px]"
                       >
-                        {link.submenu.map((sublink) => (
-                          <Link
-                            key={sublink.href}
-                            href={sublink.href}
-                            className="block px-4 py-2 text-dark-600 hover:text-dark-900 hover:bg-dark-50 transition-colors"
-                          >
-                            {sublink.label}
-                          </Link>
-                        ))}
+                        {link.submenu.map((sublink) =>
+                          sublink.external ? (
+                            <a
+                              key={sublink.href}
+                              href={getAssetPath(sublink.href)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block px-4 py-2 text-dark-600 hover:text-dark-900 hover:bg-dark-50 transition-colors"
+                            >
+                              {sublink.label}
+                            </a>
+                          ) : (
+                            <Link
+                              key={sublink.href}
+                              href={sublink.href}
+                              className="block px-4 py-2 text-dark-600 hover:text-dark-900 hover:bg-dark-50 transition-colors"
+                            >
+                              {sublink.label}
+                            </Link>
+                          )
+                        )}
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -194,16 +213,29 @@ export default function Header() {
                     <div className="text-dark-400 text-sm font-medium py-2 px-4">
                       {link.label}
                     </div>
-                    {link.submenu.map((sublink) => (
-                      <Link
-                        key={sublink.href}
-                        href={sublink.href}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="text-dark-700 hover:text-dark-900 transition-colors font-medium py-3 px-4 pl-8 rounded-lg hover:bg-dark-50 block"
-                      >
-                        {sublink.label}
-                      </Link>
-                    ))}
+                    {link.submenu.map((sublink) =>
+                      sublink.external ? (
+                        <a
+                          key={sublink.href}
+                          href={getAssetPath(sublink.href)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-dark-700 hover:text-dark-900 transition-colors font-medium py-3 px-4 pl-8 rounded-lg hover:bg-dark-50 block"
+                        >
+                          {sublink.label}
+                        </a>
+                      ) : (
+                        <Link
+                          key={sublink.href}
+                          href={sublink.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-dark-700 hover:text-dark-900 transition-colors font-medium py-3 px-4 pl-8 rounded-lg hover:bg-dark-50 block"
+                        >
+                          {sublink.label}
+                        </Link>
+                      )
+                    )}
                   </div>
                 ) : (
                   <Link

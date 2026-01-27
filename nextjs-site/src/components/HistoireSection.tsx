@@ -52,7 +52,7 @@ export default function HistoireSection() {
 
           <div className="grid md:grid-cols-3 gap-6 items-center">
             {/* 30km - gauche */}
-            <Link href="/epreuves?race=30km" className="group">
+            <Link href="/epreuves/30km" className="group">
               <div className="bg-dark-50 rounded-2xl p-6 border border-dark-100 transition-all duration-300 group-hover:shadow-lg group-hover:border-ria-300">
                 <div className="text-3xl font-display font-black text-dark-900 mb-2">30km</div>
                 <div className="text-dark-500 font-medium mb-3">Format découverte</div>
@@ -66,7 +66,7 @@ export default function HistoireSection() {
             </Link>
 
             {/* 80km - centre, plus grand */}
-            <Link href="/epreuves?race=ultra" className="group">
+            <Link href="/epreuves/ultra" className="group">
               <div className="bg-ria-500 rounded-2xl p-8 border-2 border-ria-600 transition-all duration-300 group-hover:shadow-xl group-hover:bg-ria-600 transform md:scale-105">
                 <div className="text-5xl font-display font-black text-white mb-2">80km</div>
                 <div className="text-ria-100 font-medium mb-3">Le tour complet</div>
@@ -80,7 +80,7 @@ export default function HistoireSection() {
             </Link>
 
             {/* Relais - droite */}
-            <Link href="/epreuves?race=relais" className="group">
+            <Link href="/epreuves/relais" className="group">
               <div className="bg-dark-50 rounded-2xl p-6 border border-dark-100 transition-all duration-300 group-hover:shadow-lg group-hover:border-ria-300">
                 <div className="text-3xl font-display font-black text-dark-900 mb-2">Relais</div>
                 <div className="text-dark-500 font-medium mb-3">L'aventure à deux</div>

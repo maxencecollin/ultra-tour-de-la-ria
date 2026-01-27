@@ -12,6 +12,7 @@
 ## Style et contenu
 
 - **Pas d'emojis** : ne pas utiliser d'emojis dans le code, le contenu du site, ou les messages
+- **Accents français** : toujours vérifier les accents (é, è, ê, à, ù, ô, î, etc.) dans tous les textes en français. Ne jamais oublier les accents sur les mots comme "Épreuves", "Résultats", "réservés", etc.
 
 ## Maintenance du projet
 

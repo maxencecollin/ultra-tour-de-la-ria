@@ -5,14 +5,20 @@ import Link from 'next/link'
 import { EVENT_DATE } from '@/data/races'
 import { getAssetPath } from '@/lib/utils'
 
-const links = {
+interface FooterLink {
+  label: string
+  href: string
+  external?: boolean
+}
+
+const links: { courses: FooterLink[]; infos: FooterLink[]; legal: FooterLink[] } = {
   courses: [
-    { label: 'Ultra 80km', href: '/epreuves' },
-    { label: 'Relais Duo', href: '/epreuves' },
-    { label: 'Le 30km', href: '/epreuves' },
+    { label: 'Le 80km', href: '/epreuves/ultra' },
+    { label: 'Le Relais Duo', href: '/epreuves/relais' },
+    { label: 'Le 30km', href: '/epreuves/30km' },
   ],
   infos: [
-    { label: 'Règlement', href: '/infos-pratiques' },
+    { label: 'Règlement', href: '/docs/Reglement_Ultra_Trail_Ria_2027.pdf', external: true },
     { label: 'Environnement', href: '/environnement' },
     { label: 'Parcours GPX', href: '/epreuves' },
   ],
@@ -111,12 +117,23 @@ export default function Footer() {
             <ul className="space-y-3">
               {links.infos.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-dark-400 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={getAssetPath(link.href)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-dark-400 hover:text-white transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-dark-400 hover:text-white transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

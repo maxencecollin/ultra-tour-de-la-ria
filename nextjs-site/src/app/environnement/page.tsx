@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import PageHeader from '@/components/PageHeader'
+import Image from 'next/image'
+import { getAssetPath } from '@/lib/utils'
 
 const engagements = [
   {
@@ -59,11 +60,6 @@ const regles = [
     important: false,
   },
   {
-    title: 'Utilisez les toilettes sèches',
-    description: 'Des toilettes sèches sont mises à disposition sur le parcours. Utilisez-les pour préserver les milieux naturels.',
-    important: false,
-  },
-  {
     title: 'Respectez les propriétés privées',
     description: 'Le parcours traverse parfois des terrains privés. Restez sur le tracé et ne vous écartez pas.',
     important: false,
@@ -73,10 +69,24 @@ const regles = [
 export default function Environnement() {
   return (
     <main className="min-h-screen bg-white">
-      <PageHeader
-        title="Environnement"
-        subtitle="Ensemble, préservons la Ria d'Étel"
-      />
+      {/* Hero avec photo */}
+      <section className="relative h-[60vh] md:h-[70vh] flex items-end justify-center">
+        <Image
+          src={getAssetPath('/images/photo_environnement.png')}
+          alt="Paysage de la Ria d'Étel"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <div className="relative z-10 text-center pb-12 px-4">
+          <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-4">
+            Environnement
+          </h1>
+          <p className="text-xl text-white/90">
+            Ensemble, préservons la Ria d'Étel
+          </p>
+        </div>
+      </section>
 
       {/* Introduction */}
       <section className="py-16 px-4">
