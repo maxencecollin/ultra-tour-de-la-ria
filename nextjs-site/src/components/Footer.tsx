@@ -17,9 +17,9 @@ const links = {
     { label: 'Parcours GPX', href: '/epreuves' },
   ],
   legal: [
-    { label: 'Mentions légales', href: '#' },
-    { label: 'Politique de confidentialité', href: '#' },
-    { label: 'CGV', href: '#' },
+    { label: 'Mentions légales', href: '/mentions-legales' },
+    { label: 'Confidentialité', href: '/confidentialite' },
+    { label: 'CGV', href: '/cgv' },
   ],
 }
 
@@ -124,7 +124,7 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="font-display font-bold text-white mb-4">Legal</h4>
+            <h4 className="font-display font-bold text-white mb-4">Légal</h4>
             <ul className="space-y-3">
               {links.legal.map((link) => (
                 <li key={link.label}>
@@ -166,7 +166,7 @@ export default function Footer() {
       <div className="border-t border-dark-800">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <p className="text-dark-500 text-sm text-center">
-            {new Date().getFullYear()} Ultra Trail de la Ria. Tous droits reserves.
+            {new Date().getFullYear()} Ultra Trail de la Ria. Tous droits réservés.
           </p>
         </div>
       </div>
