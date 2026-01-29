@@ -51,14 +51,22 @@ export default function Ultra80km() {
       </section>
 
       {/* Barre d'infos */}
-      <section className="bg-dark-900 py-6">
+      <section className="bg-dark-100 py-6">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8 items-center">
             <InfoItem label="Distance" value="80 km" />
             <InfoItem label="Dénivelé" value="D+ 200m" />
             <InfoItem label="Départ" value="08h00" />
             <InfoItem label="Barrière horaire" value="15h" />
-            <InfoItem label="Places" value="350" />
+            <div className="flex justify-center">
+              <Image
+                src={getAssetPath('/images/Index-50K.png')}
+                alt="UTMB Index 50K"
+                width={80}
+                height={80}
+                className="h-12 w-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -195,8 +203,8 @@ export default function Ultra80km() {
 function InfoItem({ label, value }: { label: string; value: string }) {
   return (
     <div className="text-center">
-      <p className="text-dark-400 text-sm mb-1">{label}</p>
-      <p className="text-white font-display font-bold text-xl">{value}</p>
+      <p className="text-dark-500 text-sm mb-1">{label}</p>
+      <p className="text-dark-900 font-display font-bold text-xl">{value}</p>
     </div>
   )
 }
