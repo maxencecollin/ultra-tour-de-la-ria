@@ -58,14 +58,7 @@ export default function Relais() {
             <InfoItem label="Dénivelé total" value="D+ 200m" />
             <InfoItem label="Départ" value="08h00" />
             <InfoItem label="Barrière horaire" value="15h" />
-            <div className="flex justify-center gap-2">
-              <Image
-                src={getAssetPath('/images/Index-50K.png')}
-                alt="UTMB Index 50K"
-                width={80}
-                height={80}
-                className="h-12 w-auto"
-              />
+            <div className="flex justify-center">
               <Image
                 src={getAssetPath('/images/Index-20K.png')}
                 alt="UTMB Index 20K"
