@@ -84,7 +84,6 @@ export default function Epreuves() {
                   <div className="flex items-center gap-4 text-sm text-dark-500">
                     <span>D+{race.elevation}m</span>
                     <span>Départ {race.startTime}</span>
-                    <span className="text-ria-600 font-semibold">{race.price}€</span>
                   </div>
                   <div className="mt-4 text-ria-500 font-semibold group-hover:text-ria-600 transition-colors flex items-center gap-2">
                     Découvrir

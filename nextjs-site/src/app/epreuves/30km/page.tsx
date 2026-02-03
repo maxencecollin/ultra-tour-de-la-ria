@@ -182,7 +182,7 @@ export default function Trail30km() {
                 href="/inscription"
                 className="inline-flex items-center justify-center bg-white hover:bg-ria-50 text-ria-600 px-8 py-4 rounded-xl font-display font-bold text-lg transition-colors"
               >
-                S'inscrire - {race.price}€
+                S'inscrire
               </Link>
               <a
                 href={getAssetPath('/docs/Reglement_Ultra_Trail_Ria_2027.pdf')}

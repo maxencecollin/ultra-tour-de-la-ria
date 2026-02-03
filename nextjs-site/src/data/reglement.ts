@@ -30,12 +30,12 @@ export const reglementSections: ReglementSection[] = [
         ],
       },
       {
-        title: 'Tarifs et places disponibles',
+        title: 'Places disponibles',
         text: 'Les inscriptions sont limitees :',
         list: [
-          'Ultra 80km : 70 EUR - 350 places',
-          'Relais Duo : 100 EUR par equipe - 50 duos (100 coureurs)',
-          'Le 30km : 30 EUR - 450 places',
+          'Ultra 80km : 350 places',
+          'Relais Duo : 50 duos (100 coureurs)',
+          'Le 30km : 450 places',
         ],
       },
       {
@@ -167,7 +167,7 @@ export const reglementSections: ReglementSection[] = [
       },
       {
         title: 'Navettes de recuperation',
-        text: 'Des navettes bus sont disponibles aux principaux ravitaillements pour ramener les coureurs au village depart/arrivee. Service de navettes : 8 EUR (a reserver lors de l\'inscription ou sur place).',
+        text: 'Des navettes bus sont disponibles aux principaux ravitaillements pour ramener les coureurs au village depart/arrivee.',
       },
       {
         title: 'Penalites et disqualifications',
