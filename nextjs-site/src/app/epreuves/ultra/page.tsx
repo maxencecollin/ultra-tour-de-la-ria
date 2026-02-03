@@ -59,13 +59,7 @@ export default function Ultra80km() {
             <InfoItem label="Départ" value="08h00" />
             <InfoItem label="Barrière horaire" value="15h" />
             <div className="flex justify-center">
-              <Image
-                src={getAssetPath('/images/Index-50K.png')}
-                alt="UTMB Index 50K"
-                width={80}
-                height={80}
-                className="h-12 w-auto"
-              />
+              <span className="text-dark-400 text-sm">logo</span>
             </div>
           </div>
         </div>
