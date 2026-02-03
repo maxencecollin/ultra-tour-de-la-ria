@@ -5,8 +5,8 @@ const isProd = process.env.NODE_ENV === 'production'
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: isProd ? '/ultra-trail-de-la-ria' : '',
-  assetPrefix: isProd ? '/ultra-trail-de-la-ria/' : '',
+  basePath: isProd ? '/ultra-tour-de-la-ria' : '',
+  assetPrefix: isProd ? '/ultra-tour-de-la-ria/' : '',
   images: {
     unoptimized: true,
   },
