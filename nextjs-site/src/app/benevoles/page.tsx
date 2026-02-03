@@ -125,9 +125,8 @@ export default function Benevoles() {
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 className="text-center"
               >
                 <p className="text-4xl md:text-5xl font-display font-bold text-white mb-2">
@@ -146,9 +145,8 @@ export default function Benevoles() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-900 mb-6">
                 Pourquoi devenir bénévole ?
@@ -165,9 +163,8 @@ export default function Benevoles() {
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
               className="relative h-[400px] rounded-2xl overflow-hidden"
             >
               <Image
