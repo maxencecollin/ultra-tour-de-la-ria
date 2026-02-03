@@ -21,6 +21,7 @@ const links: { courses: FooterLink[]; infos: FooterLink[]; legal: FooterLink[] }
     { label: 'Guide Coureur', href: '/infos-pratiques' },
     { label: 'Règlement', href: '/docs/Reglement_Ultra_Trail_Ria_2027.pdf', external: true },
     { label: 'Environnement', href: '/environnement' },
+    { label: 'Partenaires', href: '/partenaires' },
   ],
   legal: [
     { label: 'Mentions légales', href: '/mentions-legales' },

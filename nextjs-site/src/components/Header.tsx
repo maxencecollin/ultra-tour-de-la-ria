@@ -31,6 +31,7 @@ const navLinks: NavLink[] = [
   },
   { label: 'Environnement', href: '/environnement' },
   { label: 'Bénévoles', href: '/benevoles' },
+  { label: 'Partenaires', href: '/partenaires' },
   {
     label: 'Infos Pratiques',
     href: '/infos-pratiques',
