@@ -68,13 +68,9 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <Image
-              src={getAssetPath('/images/logo.png')}
-              alt="UTR"
-              width={40}
-              height={47}
-              className="w-8 h-auto md:w-10"
-            />
+            <div className="w-8 h-10 md:w-10 md:h-12 bg-dark-200 rounded flex items-center justify-center text-dark-500 text-xs">
+              logo
+            </div>
             <span className={`font-display font-bold text-sm md:text-base hidden sm:block transition-colors ${
               isScrolled ? 'text-dark-900' : 'text-white'
             }`}>

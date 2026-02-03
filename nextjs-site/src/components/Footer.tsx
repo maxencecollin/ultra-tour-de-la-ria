@@ -68,13 +68,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Image
-              src={getAssetPath('/images/logo-white.png')}
-              alt="Ultra Tour de la Ria"
-              width={120}
-              height={140}
-              className="mb-6"
-            />
+            <div className="w-24 h-28 bg-dark-800 rounded flex items-center justify-center text-dark-500 text-xs mb-6">
+              logo
+            </div>
             <p className="text-dark-400 mb-6 max-w-sm">
               Une grande fête du trail autour de la Ria d'Étel.
               Rendez-vous le {EVENT_DATE} pour vivre une expérience unique en Bretagne.
