@@ -9,7 +9,7 @@ export default function Inscription() {
     <main className="min-h-screen bg-white">
       <PageHeader
         title="Inscription"
-        subtitle="Rejoignez l'aventure Ultra Trail de la Ria"
+        subtitle="Rejoignez l'aventure Ultra Tour de la Ria"
       />
 
       <section className="py-16 px-4">
@@ -41,7 +41,7 @@ export default function Inscription() {
             </h2>
 
             <p className="text-dark-600 text-lg max-w-xl mx-auto mb-8">
-              Les inscriptions pour l'Ultra Trail de la Ria d'Etel ouvriront prochainement sur la plateforme Klikego.
+              Les inscriptions pour l'Ultra Tour de la Ria d'Etel ouvriront prochainement sur la plateforme Klikego.
             </p>
 
             <div className="inline-flex items-center gap-3 bg-white px-6 py-4 rounded-xl shadow-sm border border-ria-200">

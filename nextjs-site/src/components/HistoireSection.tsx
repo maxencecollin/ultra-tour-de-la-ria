@@ -31,7 +31,7 @@ export default function HistoireSection() {
             La Ria d'Étel, c'est l'une des plus belles rias de France. Un bras de mer qui s'enfonce dans les terres sur plus de 15 kilomètres, créant un labyrinthe de criques, de presqu'îles et d'îlots où la nature a gardé tous ses droits.
           </p>
           <p className="text-xl leading-relaxed mb-6">
-            L'Ultra Trail de la Ria vous invite à découvrir ce territoire d'exception par les sentiers côtiers. 80 kilomètres de pur bonheur entre pinèdes, vasières, plages secrètes et villages de caractère. Un tracé qui épouse les contours de la ria, révélant à chaque virage un nouveau panorama sur cette "petite mer" intérieure.
+            L'Ultra Tour de la Ria vous invite à découvrir ce territoire d'exception par les sentiers côtiers. 80 kilomètres de pur bonheur entre pinèdes, vasières, plages secrètes et villages de caractère. Un tracé qui épouse les contours de la ria, révélant à chaque virage un nouveau panorama sur cette "petite mer" intérieure.
           </p>
           <p className="text-xl leading-relaxed">
             Point d'orgue de l'aventure : une traversée en bateau au cœur du parcours, moment suspendu où le coureur devient marin le temps d'une escale.

@@ -18,7 +18,7 @@ export default function Confidentialite() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-dark-600 mb-8">
-              L'association Ultra Trail de la Ria accorde une grande importance à la protection de vos données personnelles. Cette politique de confidentialité vous informe sur la manière dont vos données sont collectées et utilisées.
+              L'association Ultra Tour de la Ria accorde une grande importance à la protection de vos données personnelles. Cette politique de confidentialité vous informe sur la manière dont vos données sont collectées et utilisées.
             </p>
 
             <h2 className="text-2xl font-display font-bold text-dark-900 mb-4">
@@ -26,7 +26,7 @@ export default function Confidentialite() {
             </h2>
             <p className="text-dark-600 mb-8">
               Le responsable du traitement des données est :<br />
-              <strong>Association Ultra Trail de la Ria</strong><br />
+              <strong>Association Ultra Tour de la Ria</strong><br />
               11 rue de l'éolienne, 56510 Saint-Pierre-Quiberon<br />
               Email : <a href="mailto:ultratraildelaria@gmail.com" className="text-ria-500 hover:text-ria-600">ultratraildelaria@gmail.com</a>
             </p>
@@ -42,8 +42,8 @@ export default function Confidentialite() {
               Inscriptions à l'événement
             </h2>
             <p className="text-dark-600 mb-8">
-              Les inscriptions à l'Ultra Trail de la Ria sont gérées par la plateforme <strong>Klikego</strong>. Lorsque vous vous inscrivez à l'événement, vos données personnelles sont collectées et traitées par Klikego conformément à leur propre politique de confidentialité. Nous vous invitons à consulter les conditions de Klikego lors de votre inscription.<br /><br />
-              Les données d'inscription transmises à l'association Ultra Trail de la Ria sont utilisées uniquement pour l'organisation de l'événement : gestion des dossards, communication relative à la course, résultats, etc.
+              Les inscriptions à l'Ultra Tour de la Ria sont gérées par la plateforme <strong>Klikego</strong>. Lorsque vous vous inscrivez à l'événement, vos données personnelles sont collectées et traitées par Klikego conformément à leur propre politique de confidentialité. Nous vous invitons à consulter les conditions de Klikego lors de votre inscription.<br /><br />
+              Les données d'inscription transmises à l'association Ultra Tour de la Ria sont utilisées uniquement pour l'organisation de l'événement : gestion des dossards, communication relative à la course, résultats, etc.
             </p>
 
             <h2 className="text-2xl font-display font-bold text-dark-900 mb-4">

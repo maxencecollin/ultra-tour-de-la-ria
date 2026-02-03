@@ -25,7 +25,7 @@ export default function Relais() {
       <section className="relative h-[60vh] md:h-[70vh] flex items-end justify-center">
         <Image
           src={getAssetPath('/images/HODM5670-web.jpg')}
-          alt="Ultra Trail de la Ria - Relais Duo"
+          alt="Ultra Tour de la Ria - Relais Duo"
           fill
           className="object-cover"
           priority

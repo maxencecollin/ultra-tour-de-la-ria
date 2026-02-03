@@ -22,7 +22,7 @@ export default function CGV() {
               Inscriptions via Klikego
             </h2>
             <p className="text-dark-600 mb-8">
-              Les inscriptions à l'Ultra Trail de la Ria sont gérées exclusivement par la plateforme <strong>Klikego</strong>. En vous inscrivant à l'événement, vous acceptez les conditions générales de vente de Klikego.
+              Les inscriptions à l'Ultra Tour de la Ria sont gérées exclusivement par la plateforme <strong>Klikego</strong>. En vous inscrivant à l'événement, vous acceptez les conditions générales de vente de Klikego.
             </p>
 
             <div className="bg-ria-50 border border-ria-200 rounded-xl p-6 mb-8">
@@ -41,7 +41,7 @@ export default function CGV() {
               Règlement de l'épreuve
             </h2>
             <p className="text-dark-600 mb-8">
-              En vous inscrivant à l'Ultra Trail de la Ria, vous vous engagez également à respecter le <a href={getAssetPath('/docs/Reglement_Ultra_Trail_Ria_2027.pdf')} target="_blank" rel="noopener noreferrer" className="text-ria-500 hover:text-ria-600">règlement de l'épreuve</a>.
+              En vous inscrivant à l'Ultra Tour de la Ria, vous vous engagez également à respecter le <a href={getAssetPath('/docs/Reglement_Ultra_Trail_Ria_2027.pdf')} target="_blank" rel="noopener noreferrer" className="text-ria-500 hover:text-ria-600">règlement de l'épreuve</a>.
             </p>
 
             <h2 className="text-2xl font-display font-bold text-dark-900 mb-4">
@@ -50,14 +50,14 @@ export default function CGV() {
             <p className="text-dark-600 mb-8">
               Pour toute question concernant votre inscription, vous pouvez contacter :<br /><br />
               <strong>Klikego</strong> : directement via leur plateforme pour les questions techniques liées à l'inscription<br /><br />
-              <strong>Association Ultra Trail de la Ria</strong> : <a href="mailto:ultratraildelaria@gmail.com" className="text-ria-500 hover:text-ria-600">ultratraildelaria@gmail.com</a> pour les questions relatives à l'événement
+              <strong>Association Ultra Tour de la Ria</strong> : <a href="mailto:ultratraildelaria@gmail.com" className="text-ria-500 hover:text-ria-600">ultratraildelaria@gmail.com</a> pour les questions relatives à l'événement
             </p>
 
             <h2 className="text-2xl font-display font-bold text-dark-900 mb-4">
               Assurance
             </h2>
             <p className="text-dark-600">
-              L'organisation de l'Ultra Trail de la Ria est couverte par une assurance responsabilité civile. Les participants sont invités à vérifier leur propre couverture d'assurance pour la pratique du trail running. Une licence FFA ou une assurance individuelle couvrant la pratique du trail est recommandée.
+              L'organisation de l'Ultra Tour de la Ria est couverte par une assurance responsabilité civile. Les participants sont invités à vérifier leur propre couverture d'assurance pour la pratique du trail running. Une licence FFA ou une assurance individuelle couvrant la pratique du trail est recommandée.
             </p>
           </motion.div>
         </div>

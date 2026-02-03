@@ -83,7 +83,7 @@ export default function Benevoles() {
       <section className="relative h-[70vh] flex items-end justify-center">
         <Image
           src={getAssetPath('/images/IEAP5443-web.jpg')}
-          alt="Bénévoles Ultra Trail de la Ria"
+          alt="Bénévoles Ultra Tour de la Ria"
           fill
           className="object-cover"
           priority
@@ -154,7 +154,7 @@ export default function Benevoles() {
                 Pourquoi devenir bénévole ?
               </h2>
               <p className="text-dark-600 text-lg leading-relaxed mb-6">
-                Rejoindre l'équipe de bénévoles de l'Ultra Trail de la Ria, c'est participer à la création d'un événement sportif unique autour de la Ria d'Étel.
+                Rejoindre l'équipe de bénévoles de l'Ultra Tour de la Ria, c'est participer à la création d'un événement sportif unique autour de la Ria d'Étel.
               </p>
               <p className="text-dark-600 text-lg leading-relaxed mb-6">
                 Votre soutien est essentiel pour accompagner les coureurs, assurer leur sécurité et leur offrir une expérience inoubliable. Vivez une aventure humaine exceptionnelle et contribuez à faire de cette première édition un moment mémorable !
@@ -274,7 +274,7 @@ export default function Benevoles() {
               Rejoignez l'aventure !
             </h2>
             <p className="text-dark-300 text-lg mb-8 max-w-2xl mx-auto">
-              Pour cette première édition, nous avons besoin de vous. Inscrivez-vous dès maintenant et faites partie de l'histoire de l'Ultra Trail de la Ria.
+              Pour cette première édition, nous avons besoin de vous. Inscrivez-vous dès maintenant et faites partie de l'histoire de l'Ultra Tour de la Ria.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

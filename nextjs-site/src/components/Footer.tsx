@@ -69,7 +69,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Image
               src={getAssetPath('/images/logo-white.png')}
-              alt="Ultra Trail de la Ria"
+              alt="Ultra Tour de la Ria"
               width={120}
               height={140}
               className="mb-6"
@@ -183,7 +183,7 @@ export default function Footer() {
       <div className="border-t border-dark-800">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <p className="text-dark-500 text-sm text-center">
-            {new Date().getFullYear()} Ultra Trail de la Ria. Tous droits réservés.
+            {new Date().getFullYear()} Ultra Tour de la Ria. Tous droits réservés.
           </p>
         </div>
       </div>

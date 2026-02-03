@@ -77,7 +77,7 @@ export default function Header() {
             <span className={`font-display font-bold text-sm md:text-base hidden sm:block transition-colors ${
               isScrolled ? 'text-dark-900' : 'text-white'
             }`}>
-              Ultra Trail de la Ria
+              Ultra Tour de la Ria
             </span>
           </Link>
 

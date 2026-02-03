@@ -25,7 +25,7 @@ export default function Ultra80km() {
       <section className="relative h-[60vh] md:h-[70vh] flex items-end justify-center">
         <Image
           src={getAssetPath('/images/hero-bg.jpg')}
-          alt="Ultra Trail de la Ria - 80km"
+          alt="Ultra Tour de la Ria - 80km"
           fill
           className="object-cover"
           priority

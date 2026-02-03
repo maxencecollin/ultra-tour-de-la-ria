@@ -101,7 +101,7 @@ export default function Environnement() {
               Un patrimoine naturel exceptionnel
             </h2>
             <p className="text-lg text-dark-600 leading-relaxed mb-8">
-              La Ria d'Étel est un joyau naturel de la Bretagne. Cette ancienne vallée fluviale envahie par la mer abrite une biodiversité remarquable : oiseaux migrateurs, poissons, crustacés et une flore unique. En participant à l'Ultra Trail de la Ria, vous traversez des sites naturels protégés qui méritent tout notre respect.
+              La Ria d'Étel est un joyau naturel de la Bretagne. Cette ancienne vallée fluviale envahie par la mer abrite une biodiversité remarquable : oiseaux migrateurs, poissons, crustacés et une flore unique. En participant à l'Ultra Tour de la Ria, vous traversez des sites naturels protégés qui méritent tout notre respect.
             </p>
           </motion.div>
         </div>
@@ -121,7 +121,7 @@ export default function Environnement() {
               Zones protégées traversées
             </h2>
             <p className="text-dark-600 max-w-2xl mx-auto">
-              Le parcours de l'Ultra Trail de la Ria traverse plusieurs zones bénéficiant de protections environnementales.
+              Le parcours de l'Ultra Tour de la Ria traverse plusieurs zones bénéficiant de protections environnementales.
             </p>
           </motion.div>
 
@@ -197,7 +197,7 @@ export default function Environnement() {
               Nos engagements
             </h2>
             <p className="text-dark-600 max-w-2xl mx-auto">
-              L'organisation de l'Ultra Trail de la Ria s'engage dans une démarche éco-responsable pour minimiser l'impact de l'événement.
+              L'organisation de l'Ultra Tour de la Ria s'engage dans une démarche éco-responsable pour minimiser l'impact de l'événement.
             </p>
           </motion.div>
 
@@ -293,7 +293,7 @@ export default function Environnement() {
               Courir en conscience
             </h2>
             <p className="text-ria-100 mb-6 max-w-2xl mx-auto">
-              Participer à l'Ultra Trail de la Ria, c'est s'engager à respecter un environnement fragile et précieux. Ensemble, faisons de cet événement un exemple de trail responsable.
+              Participer à l'Ultra Tour de la Ria, c'est s'engager à respecter un environnement fragile et précieux. Ensemble, faisons de cet événement un exemple de trail responsable.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a

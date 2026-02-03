@@ -28,7 +28,7 @@
 
 ## Informations sur l'événement
 
-- **Nom** : Ultra Trail de la Ria d'Étel
+- **Nom** : Ultra Tour de la Ria d'Étel
 - **Date** : 22 mai 2027
 - **Courses** :
   - Ultra 80 km (350 places)

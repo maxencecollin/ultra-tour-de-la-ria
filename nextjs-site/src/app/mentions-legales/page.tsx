@@ -21,10 +21,10 @@ export default function MentionsLegales() {
               Éditeur du site
             </h2>
             <p className="text-dark-600 mb-6">
-              Le site Ultra Trail de la Ria est édité par :
+              Le site Ultra Tour de la Ria est édité par :
             </p>
             <ul className="text-dark-600 mb-8 space-y-2">
-              <li><strong>Association :</strong> Ultra Trail de la Ria</li>
+              <li><strong>Association :</strong> Ultra Tour de la Ria</li>
               <li><strong>Adresse :</strong> 11 rue de l'éolienne, 56510 Saint-Pierre-Quiberon</li>
               <li><strong>Responsable de la publication :</strong> Maxence COLLIN</li>
               <li><strong>Email :</strong> <a href="mailto:ultratraildelaria@gmail.com" className="text-ria-500 hover:text-ria-600">ultratraildelaria@gmail.com</a></li>
@@ -43,21 +43,21 @@ export default function MentionsLegales() {
               Propriété intellectuelle
             </h2>
             <p className="text-dark-600 mb-8">
-              L'ensemble du contenu de ce site (textes, images, vidéos, logos, etc.) est la propriété exclusive de l'association Ultra Trail de la Ria, sauf mention contraire. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site est interdite sans l'autorisation écrite préalable de l'association.
+              L'ensemble du contenu de ce site (textes, images, vidéos, logos, etc.) est la propriété exclusive de l'association Ultra Tour de la Ria, sauf mention contraire. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site est interdite sans l'autorisation écrite préalable de l'association.
             </p>
 
             <h2 className="text-2xl font-display font-bold text-dark-900 mb-4">
               Crédits photos
             </h2>
             <p className="text-dark-600 mb-8">
-              Les photographies présentes sur ce site sont la propriété de l'association Ultra Trail de la Ria ou utilisées avec l'autorisation de leurs auteurs respectifs.
+              Les photographies présentes sur ce site sont la propriété de l'association Ultra Tour de la Ria ou utilisées avec l'autorisation de leurs auteurs respectifs.
             </p>
 
             <h2 className="text-2xl font-display font-bold text-dark-900 mb-4">
               Limitation de responsabilité
             </h2>
             <p className="text-dark-600 mb-8">
-              L'association Ultra Trail de la Ria s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, elle ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition. En conséquence, l'association décline toute responsabilité pour toute imprécision, inexactitude ou omission portant sur des informations disponibles sur ce site.
+              L'association Ultra Tour de la Ria s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, elle ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition. En conséquence, l'association décline toute responsabilité pour toute imprécision, inexactitude ou omission portant sur des informations disponibles sur ce site.
             </p>
 
             <h2 className="text-2xl font-display font-bold text-dark-900 mb-4">

@@ -25,7 +25,7 @@ export default function Epreuves() {
       <section className="relative h-[50vh] md:h-[60vh] flex items-end justify-center">
         <Image
           src={getAssetPath('/images/hero-bg.jpg')}
-          alt="Les épreuves de l'Ultra Trail de la Ria"
+          alt="Les épreuves de l'Ultra Tour de la Ria"
           fill
           className="object-cover"
           priority
@@ -111,7 +111,7 @@ export default function Epreuves() {
               Rendez-vous le {EVENT_DATE}
             </h2>
             <p className="text-dark-600 mb-8 max-w-2xl mx-auto">
-              Que vous soyez un trailer expérimenté ou que vous découvriez la discipline, l'Ultra Trail de la Ria vous propose un format adapté à vos ambitions.
+              Que vous soyez un trailer expérimenté ou que vous découvriez la discipline, l'Ultra Tour de la Ria vous propose un format adapté à vos ambitions.
             </p>
             <Link
               href="/inscription"

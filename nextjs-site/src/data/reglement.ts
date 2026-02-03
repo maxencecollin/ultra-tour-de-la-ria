@@ -19,7 +19,7 @@ export const reglementSections: ReglementSection[] = [
     icon: 'clipboard',
     content: [
       {
-        text: 'L\'inscription a l\'Ultra Trail de la Ria est ouverte a toute personne agee de 20 ans minimum le jour de la course (categorie Espoir). Les inscriptions se font via la plateforme Klikego.',
+        text: 'L\'inscription a l\'Ultra Tour de la Ria est ouverte a toute personne agee de 20 ans minimum le jour de la course (categorie Espoir). Les inscriptions se font via la plateforme Klikego.',
       },
       {
         title: 'Documents obligatoires',
@@ -189,7 +189,7 @@ export const reglementSections: ReglementSection[] = [
     icon: 'leaf',
     content: [
       {
-        text: 'L\'Ultra Trail de la Ria traverse des sites naturels proteges, notamment des zones Natura 2000. Le respect de l\'environnement est une condition sine qua non de participation.',
+        text: 'L\'Ultra Tour de la Ria traverse des sites naturels proteges, notamment des zones Natura 2000. Le respect de l\'environnement est une condition sine qua non de participation.',
         important: true,
       },
       {

@@ -25,7 +25,7 @@ export default function Trail30km() {
       <section className="relative h-[60vh] md:h-[70vh] flex items-end justify-center">
         <Image
           src={getAssetPath('/images/XBGL5940-web.jpg')}
-          alt="Ultra Trail de la Ria - 30km"
+          alt="Ultra Tour de la Ria - 30km"
           fill
           className="object-cover"
           priority

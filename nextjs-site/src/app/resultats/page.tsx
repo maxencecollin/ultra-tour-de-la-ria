@@ -40,7 +40,7 @@ export default function Resultats() {
             </h2>
 
             <p className="text-dark-600 text-lg max-w-xl mx-auto mb-8">
-              L'Ultra Trail de la Ria d'Etel est un nouvel evenement.
+              L'Ultra Tour de la Ria d'Etel est un nouvel evenement.
               La première édition aura lieu le 22 mai 2027.
               Les resultats seront disponibles ici apres la course.
             </p>

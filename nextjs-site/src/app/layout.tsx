@@ -4,11 +4,11 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Ultra Trail de la Ria | 23 Mai 2027',
-  description: 'Ultra Trail de la Ria d\'Étel - Une grande fête du trail en Bretagne. 80km Ultra, Relais Duo, 30km. Traversée bateau, nature préservée Natura 2000.',
+  title: 'Ultra Tour de la Ria | 23 Mai 2027',
+  description: 'Ultra Tour de la Ria d\'Étel - Une grande fête du trail en Bretagne. 80km Ultra, Relais Duo, 30km. Traversée bateau, nature préservée Natura 2000.',
   keywords: 'trail, ultra trail, ria etel, bretagne, course nature, 80km, relais, running',
   openGraph: {
-    title: 'Ultra Trail de la Ria | 23 Mai 2027',
+    title: 'Ultra Tour de la Ria | 23 Mai 2027',
     description: 'Une grande fête du trail autour de la Ria d\'Étel en Bretagne',
     type: 'website',
     locale: 'fr_FR',
