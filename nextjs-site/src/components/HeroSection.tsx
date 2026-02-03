@@ -37,7 +37,7 @@ export default function HeroSection() {
             className="mb-8"
           >
             <span className="block text-5xl md:text-7xl lg:text-8xl font-display font-black text-white tracking-tight drop-shadow-lg">
-              ULTRA TRAIL
+              ULTRA TOUR
             </span>
             <span className="block text-3xl md:text-5xl lg:text-6xl font-display font-bold text-ria-400 mt-2 drop-shadow-md">
               DE LA RIA D'ETEL
